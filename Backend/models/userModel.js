@@ -49,13 +49,13 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         if (err) {
           callback(err); // Chama a função callback com erro se houver falha
         } else {
-          callback(null, { message: "Aluno inserido com sucesso!" });
+          callback(null, { message: "Mensagem adicionada" });
         }
       });
       // Adiciona os parâmetros necessários para a inserção
 
-      request.addParameter("tema", TYPES.VarChar, data.name);
-      request.addParameter("mensagem", TYPES.Int, data.age);
+      request.addParameter("tema", TYPES.VarChar, data.tema);
+      request.addParameter("mensagem", TYPES.NVarChar, data.mensagem);
       connection.execSql(request); // Executa a consulta
     });
     connection.connect(); // Inicia a conexão
