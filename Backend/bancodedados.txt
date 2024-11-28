@@ -18,7 +18,8 @@ imagemURL nvarchar(255)
 
 -- Inserts
 insert into MensagensCurtas (mensagem, tema) values 
-('A saúde é o bem mais precioso. Agradeço por poder desfrutar dela.', 'Gratidão pela saúde')
+('A saúde é o bem mais precioso. Agradeço por poder desfrutar dela.', 'Gratidão pela saúde'),
+('O teste bem testado é o que faz o teste ser testado.', 'Testando o teste')	
 
 insert into HistoriasInspiradoras (historia, imagemURL) values
 (
@@ -29,6 +30,13 @@ desafio. Lembre-se: a persistência é a chave para o sucesso.',
 );
 
 -- Visualizações
+select * from MensagensCurtas
+select * from HistoriasInspiradoras
+
 select top 1 * from MensagensCurtas order by NEWID()
 
 select * from HistoriasInspiradoras where historia like '%mas%'
+
+-- Drop
+drop table MensagensCurtas
+drop table HistoriasInspiradoras
