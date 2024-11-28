@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors")
-const userRoutes = require("./routes/userRoutes"); // Importa as rotas de professores
+const gratidaoRoutes = require("./routes/gratidaoRoutes"); // Importa as rotas de professores
 
 const PORT = 3000
 
@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json());
 
 // Usa as rotas definidas no arquivo userRoutes
-app.use(userRoutes);
+app.use(gratidaoRoutes);
 
 // Inicia o servidor na porta 3000
 app.listen(PORT, () => {
