@@ -2,5 +2,13 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
 
-router.get("/users", userController.getUser);
-router.post("/users", userController.createUser);
+// Mensagens Curtas
+    router.get("/mensagens", userController.getUser); // Mudar função
+    router.get("/mensagens/random", userController.createUser); // Mudar função
+    router.post("/mensagens", userController) // Mudar função
+//.
+
+// Historias Inspiradoras
+    router.get("/historias/:palavra", userController.getHistoriaByPalavra)
+    router.post("/historia", userController)    // Adicionar Função
+//.
