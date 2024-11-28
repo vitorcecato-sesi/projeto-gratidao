@@ -5,7 +5,7 @@ const userController = require("../controllers/userController");
 // Mensagens Curtas
     router.get("/mensagens", userController.getMensagens); 
     router.get("/mensagens/random", userController.createMensagens); 
-    router.post("/mensagens", userController) 
+    router.post("/mensagens", userController)
 //.
 
 // Historias Inspiradoras
