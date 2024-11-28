@@ -1,0 +1,34 @@
+-- Criação de data base
+create database acao_de_gracas
+use acao_de_gracas
+
+-- Criação de tabelas
+
+create table MensagensCurtas (
+id int identity(1,1) primary key,
+mensagem nvarchar(1000) not null,
+tema varchar(100) not null
+)
+
+create table HistoriasInspiradoras (
+id int identity(1,1) primary key,
+historia nvarchar(max) not null,
+imagemURL nvarchar(255)
+)
+
+-- Inserts
+insert into MensagensCurtas (mensagem, tema) values 
+('A saúde é o bem mais precioso. Agradeço por poder desfrutar dela.', 'Gratidão pela saúde')
+
+insert into HistoriasInspiradoras (historia, imagemURL) values
+(
+'Nunca desista dos seus sonhos. A jornada pode ser longa e cheia de
+obstáculos, mas a recompensa final é sempre maior do que qualquer
+desafio. Lembre-se: a persistência é a chave para o sucesso.',
+'https://cdn.melhorespublicacoes.com.br/base/127/107/c0c/1431-951-child-playing-at-night.jpg'
+);
+
+-- Visualizações
+select top 1 * from MensagensCurtas order by NEWID()
+
+select * from HistoriasInspiradoras where historia like '%mas%'
