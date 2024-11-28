@@ -1,8 +1,8 @@
 const createConnection = require("../db"); // Importa a função para criar a conexão com o banco de dados
 const { Request, TYPES } = require("tedious"); // Importa as classes necessárias do tedious
 
-// GET
-  // Todos
+// Mensagens
+  // Pegar todas as mensagens
   exports.getAllMensagens = (callback) => {
     const connection = createConnection(); // Cria a conexão com o banco de dados
     connection.on("connect", (err) => {
@@ -37,6 +37,8 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
 
     connection.connect(); // Inicia a conexão
   };
+  
+  // Criar Mensagens
   exports.createMensagens = (data, callback) => {
     const connection = createConnection(); // Cria a conexão com o banco de dados
     connection.on("connect", (err) => {
