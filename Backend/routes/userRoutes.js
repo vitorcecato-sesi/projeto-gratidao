@@ -10,5 +10,5 @@ const userController = require("../controllers/userController");
 
 // Historias Inspiradoras
     router.get("/historias/:palavra", userController.getHistoriaByPalavra)
-    router.post("/historia", userController)    // Adicionar Função
+    router.post("/historia", userController.createHistoria)
 //.
