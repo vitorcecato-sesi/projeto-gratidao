@@ -3,8 +3,8 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 
 // Mensagens Curtas
-    router.get("/mensagens", userController.getMensagens); 
-    router.get("/mensagens/random", userController.getRandomMensagens); 
+    router.get("/mensagens", userController.getAllMensagens); 
+    router.get("/mensagens/random", userController.getRandomMensagem); 
     router.post("/mensagens", userController.createMensagens) 
 //.
 
@@ -12,3 +12,5 @@ const userController = require("../controllers/userController");
     router.get("/historias/:palavra", userController.getHistoriaByPalavra)
     router.post("/historia", userController.createHistoria)
 //.
+
+module.exports = router;  // Exporta para o index

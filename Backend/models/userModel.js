@@ -9,7 +9,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
-      const query = `SELECT * FROM acao_de_gracas`; // SQL para buscar todas os usuários
+      const query = `SELECT * FROM MensagensCurtas`; // SQL para buscar todas os usuários
       const request = new Request(query, (err, rowCount) => {
         if (err) {
           return callback(err, null); // Trata erros de execução da consulta
@@ -42,38 +42,39 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
   };
 
   // Pegar mensagens aleátorias
-  exports.getRandomMensagens = (callback) => {
+  exports.getRandomMensagem = (callback) => {
     const connection = createConnection(); // Cria a conexão com o banco de dados
     connection.on("connect", (err) => {
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
       const query = `select top 1 * from MensagensCurtas order by NEWID()`; // SQL para buscar todas os usuários
-      const request = new Request(query, (err, rowCount) => {
-        if (err) {
+      const request = new Request(query, (err) => {
+
+        if (err) {  
           return callback(err, null); // Trata erros de execução da consulta
         }
-
       });
 
       // Evento 'row' para capturar todas as linhas de resultados
       const result = []; // Variável para armazenar os resultados
       request.on("row", (columns) => {
         result.push({
-            id: columns[0].value,
-            mensagen: columns[1].value,
-            tema: columns[2].value
+          id: columns[0].value,
+          mensagem: columns[1].value,
+          tema: columns[2].value,
         });
       });
 
       // Ao completar a consulta, retorna o array com todos os usuários
       request.on("requestCompleted", (rowCount) => {
         if (rowCount === 0) {
-            callback(null, [])
+          callback(null, [])
         } else {
-            callback(null, result);
-        } 
-      });
+          callback(null, result); // Retorna o array de resultados
+        }
+    });
+
       connection.execSql(request); // Executa a consulta
     });
 
@@ -88,7 +89,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         return callback(err, null); // Trata erros de conexão
       }
       // Consulta SQL para inserir um novo usuário
-      const query = `INSERT INTO acao_de_grcas (tema,mensagem) VALUES (@tema,@mensagem )`;
+      const query = `INSERT INTO MensagensCurtas (tema,mensagem) VALUES (@tema,@mensagem )`;
       const request = new Request(query, (err) => {
         if (err) {
           callback(err); // Chama a função callback com erro se houver falha
@@ -158,8 +159,8 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
               callback(null, { message: "História inserida com sucesso!" });
             }
           }); // Adiciona os parâmetros necessários para a inserção
-          request.addParameter("historia", TYPES.VarChar, data.historia);
-          request.addParameter("imagemURL", TYPES.Int, data.imagemURL);
+          request.addParameter("historia", TYPES.NVarChar, data.historia);
+          request.addParameter("imagemURL", TYPES.NVarChar, data.imagemURL);
           connection.execSql(request); // Executa a consulta
         });
         connection.connect(); // Inicia a conexão
