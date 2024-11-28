@@ -40,6 +40,45 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
 
     connection.connect(); // Inicia a conexão
   };
+
+  // Pegar mensagens aleátorias
+  exports.getRandomMensagens = (callback) => {
+    const connection = createConnection(); // Cria a conexão com o banco de dados
+    connection.on("connect", (err) => {
+      if (err) {
+        return callback(err, null); // Trata erros de conexão
+      }
+      const query = `select top 1 * from MensagensCurtas order by NEWID()`; // SQL para buscar todas os usuários
+      const request = new Request(query, (err, rowCount) => {
+        if (err) {
+          return callback(err, null); // Trata erros de execução da consulta
+        }
+
+      });
+
+      // Evento 'row' para capturar todas as linhas de resultados
+      const result = []; // Variável para armazenar os resultados
+      request.on("row", (columns) => {
+        result.push({
+            id: columns[0].value,
+            mensagen: columns[1].value,
+            tema: columns[2].value
+        });
+      });
+
+      // Ao completar a consulta, retorna o array com todos os usuários
+      request.on("requestCompleted", (rowCount) => {
+        if (rowCount === 0) {
+            callback(null, [])
+        } else {
+            callback(null, result);
+        } 
+      });
+      connection.execSql(request); // Executa a consulta
+    });
+
+    connection.connect(); // Inicia a conexão
+  };
   
   // Criar Mensagens
   exports.createMensagens = (data, callback) => {
