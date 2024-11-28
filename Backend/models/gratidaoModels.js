@@ -125,18 +125,19 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         });
 
         // Evento 'row' para capturar a linha de resultado
-        let data = null;
+        const result = []; // Variável para armazenar os resultados
         request.on("row", (columns) => {
-            data = {
-            id: columns[0].value,
-            historia: columns[1].value,
-            imagemURL: columns[2].value,
-            };
+        result.push({
+          id: columns[0].value,
+          titulo: columns[1].value,
+          historia: columns[2].value,
+          imagemURL: columns[3].value
         });
+      });
 
         // Ao completar a consulta, retorna as histórias encontradas
         request.on("requestCompleted", () => {
-            callback(null, data); // Retorna as histórias encontradas
+            callback(null, result); // Retorna as histórias encontradas
         });
 
         connection.execSql(request); // Executa a consulta
@@ -151,7 +152,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
           if (err) {
             return callback(err, null); // Trata erros de conexão
           } // Consulta SQL para inserir uma nova história
-          const query = `INSERT INTO HistoriasInspiradoras (historia, imagemURL) VALUES (@historia,@imagemURL)`;
+          const query = `INSERT INTO HistoriasInspiradoras (titulo, historia, imagemURL) VALUES (@titulo,@historia,@imagemURL)`;
           const request = new Request(query, (err) => {
             if (err) {
               callback(err); // Chama a função callback com erro se houver falha
@@ -159,6 +160,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
               callback(null, { message: "História inserida com sucesso!" });
             }
           }); // Adiciona os parâmetros necessários para a inserção
+          request.addParameter("titulo", TYPES.VarChar, data.titulo)
           request.addParameter("historia", TYPES.NVarChar, data.historia);
           request.addParameter("imagemURL", TYPES.NVarChar, data.imagemURL);
           connection.execSql(request); // Executa a consulta
