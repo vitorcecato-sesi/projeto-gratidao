@@ -1,7 +1,7 @@
 const userModel = require("../models/userModel")
 
-exports.getUser =(req, res) => {
-    userModel.getAllUsers((err, users) => {
+exports.getMensagens =(req, res) => {
+    userModel.getAllMensagens((err, users) => {
         if (err){
             res.status(500).send("Erro ao buscar usuários")
         } else{
@@ -10,9 +10,9 @@ exports.getUser =(req, res) => {
     })
 }
 // Função para lidar com a requisição de criação de usuário
-exports.createUser = (req, res) => {
+exports.createMensagens = (req, res) => {
     const data = req.body; // Extrai o nome do corpo da requisição
-    userModel.createUser(data, (err) => {
+    userModel.createMensagens(data, (err) => {
     if (err) {
     res.status(500).send('Erro ao criar usuário' + err); // Retorna um erro 500 se algo deu errado
     } else {

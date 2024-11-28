@@ -3,13 +3,13 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
 
 // GET
   // Todos
-  exports.getAllUsers = (callback) => {
+  exports.getAllMensagens = (callback) => {
     const connection = createConnection(); // Cria a conexão com o banco de dados
     connection.on("connect", (err) => {
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
-      const query = `SELECT * FROM users1`; // SQL para buscar todas os usuários
+      const query = `SELECT * FROM acao_de_gracas`; // SQL para buscar todas os usuários
       const request = new Request(query, (err, rowCount) => {
         if (err) {
           return callback(err, null); // Trata erros de execução da consulta
@@ -22,10 +22,9 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       request.on("row", (columns) => {
         result.push({
             id: columns[0].value,
-            name: columns[1].value,
-            age: columns[2].value,
-            email: columns[3].value,
-            contact: columns[4].value,
+            mensagen: columns[1].value,
+            tema: columns[2].value,
+          
         });
       });
 
@@ -38,14 +37,14 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
 
     connection.connect(); // Inicia a conexão
   };
-  exports.createUser = (data, callback) => {
+  exports.createMensagens = (data, callback) => {
     const connection = createConnection(); // Cria a conexão com o banco de dados
     connection.on("connect", (err) => {
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
       // Consulta SQL para inserir um novo usuário
-      const query = `INSERT INTO users1 (name,age,email,contact) VALUES (@name,@age,@email, @contact )`;
+      const query = `INSERT INTO acao_de_grcas (tema,mensagem) VALUES (@tema,@mensagem )`;
       const request = new Request(query, (err) => {
         if (err) {
           callback(err); // Chama a função callback com erro se houver falha
@@ -55,10 +54,8 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       });
       // Adiciona os parâmetros necessários para a inserção
 
-      request.addParameter("name", TYPES.VarChar, data.name);
-      request.addParameter("age", TYPES.Int, data.age);
-      request.addParameter("email", TYPES.VarChar, data.email);
-      request.addParameter("contact", TYPES.VarChar, data.contact);
+      request.addParameter("tema", TYPES.VarChar, data.name);
+      request.addParameter("mensagem", TYPES.Int, data.age);
       connection.execSql(request); // Executa a consulta
     });
     connection.connect(); // Inicia a conexão
