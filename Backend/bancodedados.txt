@@ -29,6 +29,41 @@ desafio. Lembre-se: a persistência é a chave para o sucesso.',
 'https://cdn.melhorespublicacoes.com.br/base/127/107/c0c/1431-951-child-playing-at-night.jpg'
 );
 
+-- Mensagens
+insert into MensagensCurtas(mensagem, tema) values
+('A família é como um colo que acolhe e um abraço que conforta. Temos que ser gratos por ter essa base sólida em nossas vidas.', 'Família'), 
+('Agradeça a cada membro da sua família por tornarem sua jornada tão especial.', 'Família'), 
+('Obrigada, família! Cada memória compartilhada, cada riso e cada lágrima, fortalecem o laço que nos une.', 'Família'), 
+('Nosso lar é a extensão do nosso coração. Família, obrigado por transformarem cada espaço em um lugar repleto de amor e união.', 'Família'), 
+('Família, obrigado por serem os protagonistas das histórias mais engraçadas da minha vida!', 'Família'), 
+('Aos meus queridos familiares, obrigado por serem a prova de que a vida é muito mais divertida quando estamos juntos.', 'Família'),
+('Sou grato pela fé que me guia nos momentos difíceis, trazendo esperança e força para seguir em frente.', 'Fé'), 
+('Agradeço por ter fé, que me dá coragem para enfrentar cada desafio com confiança e paz no coração.', 'Fé'), 
+('Com fé, aprendi a confiar no plano divino. Sou grato por cada passo dado com essa certeza.', 'Fé'), 
+('A fé é a luz que ilumina meu caminho. Sou profundamente grato por ela me dar direção e conforto.', 'Fé'), 
+('Gratidão pela fé que me mantém firme, mesmo nos tempos de incerteza, sempre me lembrando de que não estou sozinho.', 'Fé'), 
+('Sou grato pela fé que me fortalece, me dá serenidade e me permite ver o lado positivo em tudo.', 'Fé'), 
+('A fé me ensina a acreditar no impossível. Sou grato por ela me guiar com esperança e sabedoria.', 'Fé'),
+('Seja grato por poder viver mais um dia e pela graça de contemplar a beleza da natureza.', 'Vida'), 
+('Obrigada, vida, por tudo aquilo que me ensinou. Quanto mais agradeço pela vida, mais as portas da felicidade se abrem para mim.', 'Vida'), 
+('Obrigado, vida, por me dar forças para continuar mesmo quando a dificuldade insiste em surgir.', 'Vida'), 
+('Quanto mais agradecemos pela vida, mais chances a vida nos dá para sermos gratos.', 'Vida'), 
+('Seja grato por cada momento da sua vida, antes que eles se transformem em ressentimento.', 'Vida'),
+('Agradeça pela sua saúde que permite você viver plenamente e aproveitar cada momento da vida.', 'Saúde'), 
+('Seja grato pela sua saúde, que te dá força para enfrentar os desafios diários com energia e disposição.', 'Saúde'), 
+('A saúde é um presente precioso, seja grato por poder cuidar de você viver com bem-estar.', 'Saúde'), 
+('Gratidão pela saúde que te permite seguir seus sonhos e desfrutar das coisas simples da vida.', 'Saúde'), 
+('Cada dia com saúde é uma benção, seja eternamente grato por poder viver com vitalidade e força.', 'Saúde'), 
+('Agradeça pela sua saúde, que te proporciona a liberdade de viver com alegria e energia.', 'Saúde'),
+('Sou grato pelos amigos que a vida me deu, por estarem ao meu lado nos bons e maus momentos, sempre prontos para oferecer apoio e alegria.', 'Amigos'),
+('Agradeço a cada amigo que ilumina meu caminho com risos, carinho e lealdade. Eles são a família que escolhi.', 'Amigos'), 
+('Ter amigos como vocês é uma bênção. Sou grato pela amizade sincera que torna minha vida mais leve e cheia de significado.', 'Amigos'), 
+('Gratidão aos meus amigos, que me entendem sem palavras, me aceitam como sou e tornam os dias melhores com sua presença.', 'Amigos'), 
+('Agradeço aos meus amigos por me inspirarem a ser melhor e por me oferecerem apoio incondicional. A amizade de vocês é um tesouro.', 'Amigos'), 
+('Grato por cada amigo que compartilha risadas, alegrias e também os momentos difíceis. Amigos como vocês são raros e preciosos.', 'Amigos')
+
+
+
 -- Visualizações
 select * from MensagensCurtas
 select * from HistoriasInspiradoras
