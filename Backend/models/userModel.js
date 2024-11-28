@@ -23,14 +23,17 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         result.push({
             id: columns[0].value,
             mensagen: columns[1].value,
-            tema: columns[2].value,
-          
+            tema: columns[2].value
         });
       });
 
       // Ao completar a consulta, retorna o array com todos os usuários
-      request.on("requestCompleted", () => {
-        callback(null, result); // Retorna o array de resultados
+      request.on("requestCompleted", (rowCount) => {
+        if (rowCount === 0) {
+            callback(null, [])
+        } else {
+            callback(null, result);
+        } 
       });
       connection.execSql(request); // Executa a consulta
     });
@@ -62,3 +65,64 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
     });
     connection.connect(); // Inicia a conexão
   };
+//.
+
+// Historias
+    exports.getHistoriaByPalavra = (palavra, callback) => {
+        const connection = createConnection(); // Cria a conexão com o banco de dados
+
+        connection.on("connect", (err) => {
+        if (err) {
+            return callback(err, null); // Trata erros de conexão
+        }
+
+        // Consulta SQL para buscar um usuário pelo email
+        const query = `select * from HistoriasInspiradoras where historia like '%${palavra}%'`;
+        const request = new Request(query, (err) => {
+            if (err) {
+            return callback(err, null); // Trata erros de execução da consulta
+            }
+        });
+
+        // Evento 'row' para capturar a linha de resultado
+        let data = null;
+        request.on("row", (columns) => {
+            data = {
+            id: columns[0].value,
+            historia: columns[1].value,
+            imagemURL: columns[2].value,
+            };
+        });
+
+        // Ao completar a consulta, retorna o usuário encontrado
+        request.on("requestCompleted", () => {
+            callback(null, data); // Retorna o usuário encontrado ou null se não existir
+        });
+
+        connection.execSql(request); // Executa a consulta
+        });
+
+        connection.connect(); // Inicia a conexão
+    };
+
+    exports.createHistoria = (data, callback) => {
+        const connection = createConnection(); // Cria a conexão com o banco de dados
+        connection.on("connect", (err) => {
+          if (err) {
+            return callback(err, null); // Trata erros de conexão
+          } // Consulta SQL para inserir um novo usuário
+          const query = `INSERT INTO HistoriasInspiradoras (historia, imagemURL) VALUES (@historia,@imagemURL)`;
+          const request = new Request(query, (err) => {
+            if (err) {
+              callback(err); // Chama a função callback com erro se houver falha
+            } else {
+              callback(null, { message: "História inserida com sucesso!" });
+            }
+          }); // Adiciona os parâmetros necessários para a inserção
+          request.addParameter("historia", TYPES.VarChar, data.historia);
+          request.addParameter("imagemURL", TYPES.Int, data.imagemURL);
+          connection.execSql(request); // Executa a consulta
+        });
+        connection.connect(); // Inicia a conexão
+      };
+//.
