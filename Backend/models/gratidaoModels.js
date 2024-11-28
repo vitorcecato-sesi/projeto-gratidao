@@ -160,7 +160,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
               callback(null, { message: "História inserida com sucesso!" });
             }
           }); // Adiciona os parâmetros necessários para a inserção
-          request.addParameter("titulo", TYPES.VarChar, data.titulo)
+          request.addParameter("titulo", TYPES.NVarChar, data.titulo)
           request.addParameter("historia", TYPES.NVarChar, data.historia);
           request.addParameter("imagemURL", TYPES.NVarChar, data.imagemURL);
           connection.execSql(request); // Executa a consulta
