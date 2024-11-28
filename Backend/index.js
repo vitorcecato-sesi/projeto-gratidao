@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors")
 const gratidaoRoutes = require("./routes/gratidaoRoutes"); // Importa as rotas de professores
 
+// Variável com a informação da porta que será utilizada
 const PORT = 3000
 
 // Habilita CORS para permitir requisições de origens diferentes

@@ -9,7 +9,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
-      const query = `SELECT * FROM MensagensCurtas`; // SQL para buscar todas os usuários
+      const query = `SELECT * FROM MensagensCurtas`; // SQL para buscar todas as histórias
       const request = new Request(query, (err, rowCount) => {
         if (err) {
           return callback(err, null); // Trata erros de execução da consulta
@@ -27,7 +27,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         });
       });
 
-      // Ao completar a consulta, retorna o array com todos os usuários
+      // Ao completar a consulta, retorna o array com todas as histórias
       request.on("requestCompleted", (rowCount) => {
         if (rowCount === 0) {
             callback(null, [])
@@ -48,7 +48,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
-      const query = `select top 1 * from MensagensCurtas order by NEWID()`; // SQL para buscar todas os usuários
+      const query = `select top 1 * from MensagensCurtas order by NEWID()`; // SQL para buscar uma mensagem aleátoria
       const request = new Request(query, (err) => {
 
         if (err) {  
@@ -66,7 +66,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         });
       });
 
-      // Ao completar a consulta, retorna o array com todos os usuários
+      // Ao completar a consulta, retorna o array com a mensagem aleátoria
       request.on("requestCompleted", (rowCount) => {
         if (rowCount === 0) {
           callback(null, [])
@@ -88,7 +88,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       if (err) {
         return callback(err, null); // Trata erros de conexão
       }
-      // Consulta SQL para inserir um novo usuário
+      // Consulta SQL para inserir uma nova história
       const query = `INSERT INTO MensagensCurtas (tema,mensagem) VALUES (@tema,@mensagem )`;
       const request = new Request(query, (err) => {
         if (err) {
@@ -116,7 +116,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
             return callback(err, null); // Trata erros de conexão
         }
 
-        // Consulta SQL para buscar um usuário pelo email
+        // Consulta SQL para buscar as histórias de acordo com a palavra inserida
         const query = `select * from HistoriasInspiradoras where historia like '%${palavra}%'`;
         const request = new Request(query, (err) => {
             if (err) {
@@ -134,9 +134,9 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
             };
         });
 
-        // Ao completar a consulta, retorna o usuário encontrado
+        // Ao completar a consulta, retorna as histórias encontradas
         request.on("requestCompleted", () => {
-            callback(null, data); // Retorna o usuário encontrado ou null se não existir
+            callback(null, data); // Retorna as histórias encontradas
         });
 
         connection.execSql(request); // Executa a consulta
@@ -150,7 +150,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         connection.on("connect", (err) => {
           if (err) {
             return callback(err, null); // Trata erros de conexão
-          } // Consulta SQL para inserir um novo usuário
+          } // Consulta SQL para inserir uma nova história
           const query = `INSERT INTO HistoriasInspiradoras (historia, imagemURL) VALUES (@historia,@imagemURL)`;
           const request = new Request(query, (err) => {
             if (err) {
@@ -164,5 +164,5 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
           connection.execSql(request); // Executa a consulta
         });
         connection.connect(); // Inicia a conexão
-      };
+    };
 //.
