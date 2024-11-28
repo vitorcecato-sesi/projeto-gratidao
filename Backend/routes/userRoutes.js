@@ -3,9 +3,9 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 
 // Mensagens Curtas
-    router.get("/mensagens", userController.getUser); // Mudar função
-    router.get("/mensagens/random", userController.createUser); // Mudar função
-    router.post("/mensagens", userController) // Mudar função
+    router.get("/mensagens", userController.getMensagens); 
+    router.get("/mensagens/random", userController.createMensagens); 
+    router.post("/mensagens", userController) 
 //.
 
 // Historias Inspiradoras
