@@ -1,4 +1,7 @@
-
+* {
+padding: 0;
+margin: 0;
+}
 
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
 @font-face {
@@ -14,6 +17,7 @@
   
   /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
   .headerNav-container {
+    margin-top: 0.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -137,3 +141,44 @@
   .ativo, .bolinhas:hover {
     background-color: #4e4e4e;
   }
+
+  .article {
+display: flex;
+flex-direction: column;
+align-items: center;
+  }
+
+  .titulo1 {
+    background-color: #BF0504;
+    color: black;
+    text-align: center;
+    width: 10vw;
+  }
+
+  .titulo2 {
+    background-color: #F56004;
+    color: black;
+    text-align: center;
+    width: 10vw;
+  }
+
+  .paragrafos {
+    width: 60vw;
+    text-align: justify;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #874922;
+    padding-top: 2vw;
+    
+  }
+
+  .imgFooter {
+    margin-top: -1.5%;
+    width: 15vw;
+    height: 15vw;
+  }
+
