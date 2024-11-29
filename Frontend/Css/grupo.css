@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
+  height: 17vh;
 }
 
 .headerNav-container header {
@@ -31,21 +31,43 @@ body {
 .headerNav-container img {
   width: 20vw;
   height: auto;
+  transition: all 0.5s ease;
+}
+
+.headerNav-container img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
 }
 
 .headerNav-container nav a {
   text-decoration: none;
-  color: #372522;
+  font-size: 1.3em;
+  color: white;
   transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+.headerNav-container nav a.destaque {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #b66e3f;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
 }
 
 .headerNav-container nav a:hover {
-  color: #bf0504;
-  transition: color 0.5s ease;
-}
-
-.headerNav-container nav a:active {
-  color: #874922;
+  color: #b66e3f;
+  transform: scale(1.1); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transition: color 0.5s ease; /* Tempo de transição da cor */
+  transition: all 0.5s ease; /* Faz com que a transição seja mais suave */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -62,14 +84,80 @@ body {
   font-size: 2em;
   background-color: #372522;
   color: white;
-  width: 97%;
+  width: 95vw;
   padding: 1em;
   border-radius: 20px;
 }
 
 .conclusao-container article {
   text-align: center;
+  line-height: 4vh;
+  font-size: 1.3em;
   width: 50%;
   padding: 1em;
   border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
 }
+
+.conclusao-container article:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* IMAGEM DO GRUPO + LOGO DO GRUPO -------------------------------------------------------------------------------------------------------------------------------------- */
+.imgGrupoLogo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgGrupoLogo-container img {
+  width: 30vw;
+  height: auto;
+  padding: 3em;
+  transition: all 0.5s ease;
+  border-radius: 150px;
+}
+
+.imgGrupoLogo-container img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* NOME DOS INTEGRANTES ------------------------------------------------------------------------------------------------------------------------------------------------- */
+.nomes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 20%;
+  font-size: 1.3em;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+.footer-container footer {
+  display: flex;
+  background-color: #b66e3f;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 20px;
+}
+
+.footer-container img {
+  width: 10%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
