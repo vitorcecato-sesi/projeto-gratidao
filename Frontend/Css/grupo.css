@@ -1,0 +1,75 @@
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: Parkinsans;
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+}
+
+body {
+  font-family: Parkinsans;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+.headerNav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+
+.headerNav-container header {
+  flex: 0; /* Faz o header ocupar o espaço disponível */
+}
+
+.headerNav-container nav {
+  flex: 2; /* Faz o nav ocupar mais espaço que o header */
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerNav-container img {
+  width: 20vw;
+  height: auto;
+}
+
+.headerNav-container nav a {
+  text-decoration: none;
+  color: #372522;
+  transition: color 0.5s ease;
+}
+
+.headerNav-container nav a:hover {
+  color: #bf0504;
+  transition: color 0.5s ease;
+}
+
+.headerNav-container nav a:active {
+  color: #874922;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CONCLUSÃO (article + elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------ */
+.conclusao-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conclusao-container h1 {
+  text-align: center;
+  font-size: 2em;
+  background-color: #372522;
+  color: white;
+  width: 97%;
+  padding: 1em;
+  border-radius: 20px;
+}
+
+.conclusao-container article {
+  text-align: center;
+  width: 50%;
+  padding: 1em;
+  border-radius: 20px;
+}
