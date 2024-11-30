@@ -1,0 +1,266 @@
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: Parkinsans;
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+}
+
+body {
+  font-family: Parkinsans;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+.headerNav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17vh;
+}
+
+.headerNav-container header {
+  flex: 0; /* Faz o header ocupar o espaço disponível */
+}
+
+.headerNav-container nav {
+  flex: 2; /* Faz o nav ocupar mais espaço que o header */
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerNav-container img {
+  width: 20vw;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.headerNav-container img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+.headerNav-container nav a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+.headerNav-container nav a.destaque {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #b66e3f;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+.headerNav-container nav a:hover {
+  color: #b66e3f;
+  transform: scale(1.1); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transition: color 0.5s ease; /* Tempo de transição da cor */
+  transition: all 0.5s ease; /* Faz com que a transição seja mais suave */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* PARALLAX's (configurações) ------------------------------------------------------------------------------------------------------------------------------------------- */
+.parallax1 {
+  background-image: url(../Imagens/gratidaoParallaxImg1.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+.parallax2 {
+  background-image: url(../Imagens/gratidaoParallaxImg2.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+.parallax3 {
+  background-image: url(../Imagens/gratidaoParallaxImg3.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+.parallax4 {
+  background-image: url(../Imagens/gratidaoParallaxImg4.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  border-radius: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CONCEITO ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.conceito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6em;
+  padding-top: 1em;
+}
+
+.conceito h1 {
+  font-size: 3em;
+}
+
+.conceito article {
+  text-align: center;
+  line-height: 4vh;
+  font-size: 1.3em;
+  width: 45vw;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
+}
+
+.conceito article:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* EXEMPLO 1 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.exemplo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6em;
+  padding-top: 1em;
+}
+
+.exemplo1 h1 {
+  font-size: 3em;
+}
+
+.exemplo1 article {
+  text-align: center;
+  line-height: 4vh;
+  font-size: 1.3em;
+  width: 45vw;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #b66e3f;
+}
+
+.exemplo1 article:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* EXEMPLO 2 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.exemplo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6em;
+  padding-top: 1em;
+}
+
+.exemplo2 h1 {
+  font-size: 3em;
+}
+
+.exemplo2 article {
+  text-align: center;
+  line-height: 4vh;
+  font-size: 1.3em;
+  width: 45vw;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #372522;
+}
+
+.exemplo2 article:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* EXEMPLO 3 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.exemplo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6em;
+  padding-top: 1em;
+}
+
+.exemplo3 h1 {
+  font-size: 3em;
+}
+
+.exemplo3 article {
+  text-align: center;
+  line-height: 4vh;
+  font-size: 1.3em;
+  width: 45vw;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #f56004;
+}
+
+.exemplo3 article:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+.footer-container footer {
+  display: flex;
+  background-color: #b66e3f;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 20px;
+}
+
+.footer-container img {
+  width: 10%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
