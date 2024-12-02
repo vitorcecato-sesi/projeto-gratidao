@@ -10,6 +10,18 @@ body {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Efeito de aparecer com o tempo --------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Começa com a opacidade 0, para ficar invisivel */
+  }
+  to {
+    opacity: 1; /* Termina com a opacidade 1 */
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
 .headerNav-container {
   display: flex;
@@ -81,6 +93,7 @@ body {
   background-repeat: no-repeat;
   height: 30vh;
   border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
 .parallax2 {
@@ -90,6 +103,7 @@ body {
   background-position: center;
   height: 30vh;
   border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
 .parallax3 {
@@ -99,6 +113,7 @@ body {
   background-position: center;
   height: 30vh;
   border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
 .parallax4 {
@@ -108,6 +123,7 @@ body {
   background-position: center;
   height: 30vh;
   border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -119,6 +135,7 @@ body {
   align-items: center;
   padding: 6em;
   padding-top: 1em;
+  animation: fadeIn 3s;
 }
 
 .conceito h1 {
@@ -151,6 +168,7 @@ body {
   align-items: center;
   padding: 6em;
   padding-top: 1em;
+  animation: fadeIn 3s;
 }
 
 .exemplo1 h1 {
@@ -185,6 +203,7 @@ body {
   align-items: center;
   padding: 6em;
   padding-top: 1em;
+  animation: fadeIn 3s;
 }
 
 .exemplo2 h1 {
@@ -219,6 +238,7 @@ body {
   align-items: center;
   padding: 6em;
   padding-top: 1em;
+  animation: fadeIn 3s;
 }
 
 .exemplo3 h1 {
@@ -256,6 +276,7 @@ body {
   flex-wrap: wrap;
   gap: 10%;
   border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
 .footer-container img {
