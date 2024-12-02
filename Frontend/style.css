@@ -1,61 +1,63 @@
 * {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
 @font-face {
     font-family: Parkinsans;
     src: url(./Fonte/Parkinsans-Bold.ttf);
-  }
-  
-  body {
+}
+
+body {
     font-family: Parkinsans;
-  }
-  
-  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-  
-  /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
-  .headerNav-container {
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+.headerNav-container {
     margin-top: 0.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 15vh;
-  }
-  
-  .headerNav-container header {
-    flex: 0; /* Faz o header ocupar o espaço disponível */
-  }
-  
-  .headerNav-container nav {
-    flex: 2; /* Faz o nav ocupar mais espaço que o header */
+}
+
+.headerNav-container header {
+    flex: 0;
+    /* Faz o header ocupar o espaço disponível */
+}
+
+.headerNav-container nav {
+    flex: 2;
+    /* Faz o nav ocupar mais espaço que o header */
     display: flex;
     justify-content: space-around;
-  }
-  
-  .headerNav-container img {
+}
+
+.headerNav-container img {
     width: 20vw;
     height: auto;
-  }
-  
-  .headerNav-container nav a {
+}
+
+.headerNav-container nav a {
     text-decoration: none;
     color: #372522;
     transition: color 0.5s ease;
-  }
-  
-  .headerNav-container nav a:hover {
+}
+
+.headerNav-container nav a:hover {
     color: #bf0504;
     transition: color 0.5s ease;
-  }
-  
-  .headerNav-container nav a:active {
-    color: #874922;
-  }
+}
 
-  .slider {
+.headerNav-container nav a:active {
+    color: #874922;
+}
+
+.slider {
     margin: 0;
     display: flex;
     width: 100%;
@@ -63,8 +65,8 @@ margin: 0;
     align-items: center;
     justify-content: center;
     position: relative;
-   
-  }
+
+}
 
 .slides {
     position: relative;
@@ -79,47 +81,48 @@ margin: 0;
 }
 
 .texto {
-  color: #f2f2f2;
-  font-size: 5vw;
-  position: absolute;
-  width: 40vw;
-  margin-left: -6%;
-  margin-top: -57%;
+    color: #f2f2f2;
+    font-size: 5vw;
+    position: absolute;
+    width: 40vw;
+    margin-left: -6%;
+    margin-top: -57%;
 }
- 
+
 .cor {
     color: red;
 }
 
 .botoes {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 1.8vw;
-  margin-bottom: -10%;
-  color: white;
-  font-weight: bold;
-  font-size: 1.7vw;
-  transition: 0.6s;
-  background-color: transparent;
-  border-style: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 1.8vw;
+    margin-bottom: -10%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7vw;
+    transition: 0.6s;
+    background-color: transparent;
+    border-style: none;
 }
 
 #anterior {
     left: 0;
     border-radius: 0.5vw;
-  }
+}
 
 #proximo {
     right: 0;
     border-radius: 0.5vw;
-  }
+}
 
-  #anterior:hover, #proximo:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+#anterior:hover,
+#proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-  .navImg {
+.navImg {
     width: 98.3vw;
     position: absolute;
     margin-top: -3%;
@@ -127,58 +130,58 @@ margin: 0;
     flex-direction: row;
     justify-content: center;
     gap: 0.4vw;
-  }
+}
 
-  .bolinhas {
+.bolinhas {
     cursor: pointer;
     height: 1vw;
     width: 1vw;
     background-color: rgb(189, 189, 189);
     border-radius: 50%;
     transition: background-color 0.6s;
-  }
-  
-  .ativo, .bolinhas:hover {
+}
+
+.ativo,
+.bolinhas:hover {
     background-color: #4e4e4e;
-  }
+}
 
-  .article {
-display: flex;
-flex-direction: column;
-align-items: center;
-  }
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-  .titulo1 {
+.titulo1 {
     background-color: #BF0504;
     color: black;
     text-align: center;
     width: 10vw;
-  }
+}
 
-  .titulo2 {
+.titulo2 {
     background-color: #F56004;
     color: black;
     text-align: center;
     width: 10vw;
-  }
+}
 
-  .paragrafos {
+.paragrafos {
     width: 60vw;
     text-align: justify;
-  }
+}
 
-  .footer {
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #874922;
     padding-top: 2vw;
-    
-  }
 
-  .imgFooter {
+}
+
+.imgFooter {
     margin-top: -1.5%;
     width: 15vw;
     height: 15vw;
-  }
-
+}
