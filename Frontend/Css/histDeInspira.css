@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Parkinsans;
+    src: url(../Fonte/Parkinsans-Bold.ttf);
+}
+
+body {
+    font-family: Parkinsans;
+}
+
+/* ---------------------------------------------------------------------------------------------------------
+
+/* Efeito de aparecer com o tempo --------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Começa com a opacidade 0, para ficar invisivel */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina com a opacidade 1 */
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+.headerNav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+}
+
+.headerNav-container header {
+    flex: 0;
+    /* Faz o header ocupar o espaço disponível */
+}
+
+.headerNav-container nav {
+    flex: 2;
+    /* Faz o nav ocupar mais espaço que o header */
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerNav-container img {
+    width: 20vw;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+.headerNav-container img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.headerNav-container nav a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    transition: color 0.5s ease;
+    background-color: #372522;
+    border-radius: 20px;
+    padding: 0.7em;
+    box-shadow: 6px 5px 0px gray;
+    transition: all 0.5s ease;
+}
+
+.headerNav-container nav a.destaque {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #b66e3f;
+    transition: color 0.5s ease;
+    background-color: #372522;
+    border-radius: 20px;
+    padding: 0.7em;
+    box-shadow: 6px 5px 0px gray;
+    transition: all 0.5s ease;
+}
+
+.headerNav-container nav a:hover {
+    color: #b66e3f;
+    transform: scale(1.1);
+    /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+    transition: color 0.5s ease;
+    /* Tempo de transição da cor */
+    transition: all 0.5s ease;
+    /* Faz com que a transição seja mais suave */
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.article {
+    background-color: #B66E3F;
+    padding: 3vw;
+    border-radius: 1.4vw;
+    animation: fadeIn 3s;
+}
+
+.titulo {
+    color: #372522;
+    font-size: 3em;
+    margin-top: -1%;
+    animation: fadeIn 3s;
+}
+
+.paragrafos {
+    color: white;
+    margin-left: 5%;
+    font-size: 1.5em;
+    animation: fadeIn 3s;
+}
+
+.pesquisar {
+
+    justify-content: center;
+    font-size: 1em;
+    width: 50vw;
+    padding: 1.5vw;
+    background-color: #E6E6E6;
+    border: none;
+    outline: none;
+    border-radius: 0.7vw;
+    animation: fadeIn 3s; 
+
+}
+
+
+.contIco {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1.3vw;
+    background-color: #E6E6E6;
+    border-radius: 0.7vw;
+    align-items: center;
+    animation: fadeIn 3s;
+
+}
+
+.contIco i {
+    color: #919191;
+    font-size: 1.5em;
+    animation: fadeIn 3s;
+    cursor: pointer;
+}
+
+.botaoCria {
+    background-color: #f56004;
+    padding: 1.3vw;
+    color: white;
+    border-radius: 0.5vw;
+    text-decoration: none;
+    animation: fadeIn 3s;
+}
+
+.botaoCria:hover {
+    transition: 0.5s;
+    background-color: #f8a978;
+    animation: fadeIn 3s;
+}
+
+.flexColuna {
+ padding: 10vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ animation: fadeIn 3s;
+}
+
+
+/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+.footer-container footer {
+    display: flex;
+    background-color: #874922;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    border-radius: 20px;
+    animation: fadeIn 3s;
+  }
+  
+  .footer-container img {
+    width: 10%;
+    height: auto;
+    animation: fadeIn 3s;
+  }
+  
+  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
