@@ -1,16 +1,26 @@
-/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
+/* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: Parkinsans;
-  src: url(../Fonte/Parkinsans-Bold.ttf);
+  src: url(../Fonte/Parkinsans-Bold.ttf);  /* Link da pasta onde a fonte está */
 }
 
+/* Definir a fonte para todo o body(corpo) da página */
 body {
   font-family: Parkinsans;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Efeito de aparecer com o tempo --------------------------------------------------------------------------------------------------------------------------------------- */
+/* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
 @keyframes fadeIn {
   from {
     opacity: 0; /* Começa com a opacidade 0, para ficar invisivel */
@@ -20,37 +30,43 @@ body {
   }
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* " animation: fadeIn 3s; "  -> necessário colocar esse comando nos container para funcionar a animação */
 
-/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
 .headerNav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 17vh;
 }
-
+/* Mexe no Header */
 .headerNav-container header {
   flex: 0; /* Faz o header ocupar o espaço disponível */
 }
 
+/* Mexe no Nav */
 .headerNav-container nav {
   flex: 2; /* Faz o nav ocupar mais espaço que o header */
   display: flex;
   justify-content: space-around;
 }
 
+/* Mexe na imagem dentro do container (apenas a do Header) */
 .headerNav-container img {
   width: 20vw;
   height: auto;
   transition: all 0.5s ease;
 }
 
+/* Ao passar o mouse por cima da imagem, da um efeito de aumento */
 .headerNav-container img:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease;
+  transform: scale(1.1); /* Aumenta o tamanho da imagem */
+  transition: all 0.5s ease; /* Tempo de transição */
 }
 
+/* Mexe no Nav, especificadamente nos A (links) */
 .headerNav-container nav a {
   text-decoration: none;
   font-size: 1.3em;
@@ -63,6 +79,7 @@ body {
   transition: all 0.5s ease;
 }
 
+/* Mexe no Nav, especificadamente em um que está com a CLASS="destaque", para dar um efeito de que está naquela página */
 .headerNav-container nav a.destaque {
   text-decoration: none;
   font-size: 1.3em;
@@ -75,6 +92,7 @@ body {
   transition: all 0.5s ease;
 }
 
+/* Ao passar o mouse por cima dos links, da um efeito de aumento */
 .headerNav-container nav a:hover {
   color: #b66e3f;
   transform: scale(1.1); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
@@ -82,53 +100,52 @@ body {
   transition: all 0.5s ease; /* Faz com que a transição seja mais suave */
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* PARALLAX's (configurações) ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* PARALLAX's (configurações) ❕ -------------------------------------------------------------------------------------------------- */
 .parallax1 {
-  background-image: url(../Imagens/gratidaoParallaxImg1.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(../Imagens/gratidaoParallaxImg1.png); /* Puxa a imagem da pasta */
+  background-attachment: fixed; /* Mantém a imagem fixa */
+  background-size: cover; /* Tamanho da imagem */
+  background-position: center; /* Posição da imagem */
   height: 30vh;
   border-radius: 20px;
   animation: fadeIn 3s;
 }
 
 .parallax2 {
-  background-image: url(../Imagens/gratidaoParallaxImg2.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../Imagens/gratidaoParallaxImg2.png); /* Puxa a imagem da pasta */
+  background-attachment: fixed; /* Mantém a imagem fixa */
+  background-size: cover; /* Tamanho da imagem */
+  background-position: center; /* Posição da imagem */
   height: 30vh;
   border-radius: 20px;
   animation: fadeIn 3s;
 }
 
 .parallax3 {
-  background-image: url(../Imagens/gratidaoParallaxImg3.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../Imagens/gratidaoParallaxImg3.png); /* Puxa a imagem da pasta */
+  background-attachment: fixed; /* Mantém a imagem fixa */
+  background-size: cover; /* Tamanho da imagem */
+  background-position: center; /* Posição da imagem */
   height: 30vh;
   border-radius: 20px;
   animation: fadeIn 3s;
 }
 
 .parallax4 {
-  background-image: url(../Imagens/gratidaoParallaxImg4.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../Imagens/gratidaoParallaxImg4.png); /* Puxa a imagem da pasta */
+  background-attachment: fixed; /* Mantém a imagem fixa */
+  background-size: cover; /* Tamanho da imagem */
+  background-position: center; /* Posição da imagem */
   height: 30vh;
   border-radius: 20px;
   animation: fadeIn 3s;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CONCEITO ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* CONCEITO DE GRATIDÃO ❕ -------------------------------------------------------------------------------------------------------- */
 .conceito {
   display: flex;
   flex-direction: column;
@@ -138,10 +155,13 @@ body {
   animation: fadeIn 3s;
 }
 
+/* Mexe com o H1 (título) */
 .conceito h1 {
   font-size: 3em;
+  padding: 1em;
 }
 
+/* Mexe com o Article (texto) */
 .conceito article {
   text-align: center;
   line-height: 4vh;
@@ -155,13 +175,14 @@ body {
   transition: all 0.5s ease;
 }
 
+/* Ao passar o mouse sobre o article (texto), da um efeito de aumentar o tamanho */
 .conceito article:hover {
   transform: scale(1.1);
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* EXEMPLO 1 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* GRATIDÃO PASSIVA ❕ ------------------------------------------------------------------------------------------------------------ */
 .exemplo1 {
   display: flex;
   flex-direction: column;
@@ -171,10 +192,13 @@ body {
   animation: fadeIn 3s;
 }
 
+/* Mexe no H1 (título) */
 .exemplo1 h1 {
   font-size: 3em;
+  padding: 1em;
 }
 
+/* Mexe no Article (texto) */
 .exemplo1 article {
   text-align: center;
   line-height: 4vh;
@@ -190,13 +214,14 @@ body {
   background-color: #b66e3f;
 }
 
+/* Ao passar o mouse sobre o article (texto), da um efeito de aumentar o tamanho */
 .exemplo1 article:hover {
   transform: scale(1.1);
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* EXEMPLO 2 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* GRATIDÃO ATIVA ❕ -------------------------------------------------------------------------------------------------------------- */
 .exemplo2 {
   display: flex;
   flex-direction: column;
@@ -206,10 +231,13 @@ body {
   animation: fadeIn 3s;
 }
 
+/* Mexe no H1 (título) */
 .exemplo2 h1 {
   font-size: 3em;
+  padding: 1em;
 }
 
+/* Mexe no Article (texto) */
 .exemplo2 article {
   text-align: center;
   line-height: 4vh;
@@ -225,13 +253,14 @@ body {
   background-color: #372522;
 }
 
+/* Ao passar o mouse sobre o article (texto), da um efeito de aumentar o tamanho */
 .exemplo2 article:hover {
   transform: scale(1.1);
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* EXEMPLO 3 ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* GRATIDÃO TEÓRICA/AUTOMÁTICA ❕ -------------------------------------------------------------------------------------------------- */
 .exemplo3 {
   display: flex;
   flex-direction: column;
@@ -241,10 +270,13 @@ body {
   animation: fadeIn 3s;
 }
 
+/* Mexe no H1 (título) */
 .exemplo3 h1 {
   font-size: 3em;
+  padding: 1em;
 }
 
+/* Mexe no Article (texto) */
 .exemplo3 article {
   text-align: center;
   line-height: 4vh;
@@ -260,11 +292,14 @@ body {
   background-color: #f56004;
 }
 
+/* Ao passar o mouse sobre o article (texto), da um efeito de aumentar o tamanho */
 .exemplo3 article:hover {
   transform: scale(1.1);
 }
 
-/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FOOTER - INFORMAÇÕES E LOGO ❕ ------------------------------------------------------------------------------------------------- */
 .footer-container footer {
   display: flex;
   background-color: #b66e3f;
@@ -279,9 +314,11 @@ body {
   animation: fadeIn 3s;
 }
 
+/* Mexe na Imagem */
 .footer-container img {
   width: 10%;
   height: auto;
+  animation: fadeIn 3s;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------- */
