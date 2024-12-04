@@ -1,6 +1,6 @@
 const apiURLHist = "http://localhost:3000/historia"
 
-async function criarMensagemGratidao() {
+async function criarHistoriaGratidao() {
 
     // Pega elementos
     const msgSucesso = document.getElementById("addSucesso")
@@ -14,6 +14,8 @@ async function criarMensagemGratidao() {
     const titulo = inputTitulo.value.trim()
     const historia = inputHistoria.value.trim()
     const imagemURL = inputImagem.value.trim()
+
+    msgSucesso.style.display = "none"
 
     // Confere se os campos foram preenchidos
     if (!titulo && !historia) {
@@ -40,11 +42,9 @@ async function criarMensagemGratidao() {
         inputTitulo.value = ""
         inputHistoria.value = ""
         inputImagem.value = ""
-
+        msgSucesso.style.display = "block"
     } else {
         const error = await response.json();
         alert(`Erro ao adicionar história: ${error.message}`);
     }
-    setTimeout(5000)
-    msgSucesso.style.display = "none"
 }
