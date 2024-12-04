@@ -25,17 +25,20 @@
     </nav>
   </section>
 
+  <h1 class="tituloPagina"> CRIANDO SUA PRÓPRIA HISTÓRIA </h1>
+
   <section class="criarMensagem-container">
 
-    <h1>Titulo</h1>
-    <input type="text" id="userTituloGratidao" placeholder="Digite o título da sua história:">
-    <h1>Digite aqui...</h1>
-    <input type="text" id="userHistoriaGratidao" placeholder="Digite sua história:">
-    <h1>imagemURL</h1>
-    <input type="text" id="userImagemGratidao" placeholder="Insira o link da sua imagem aqui: (ou deixe vazio)" maxlength="255">
-    <!-- Fazer aqui a rota put para digitar a historia, por favor Vitor Geraldo Cecato -->
+    <p>Título</p>
+    <input type="text" id="userTituloGratidao" placeholder="Digite o título da sua história">
+    <p>Insira sua história</p>
+    <input type="text" id="userHistoriaGratidao" placeholder="Digite sua história">
+    <p>URL da imagem (link)</p>
+    <input type="text" id="userImagemGratidao" placeholder="Insira o link da sua imagem aqui (ou deixe vazio)" maxlength="255">
+  </section>
 
-    <button onclick="criarHistoriaGratidao()"> Enviar História </button>
+  <section class="botaoEnviar-container">
+  <button onclick="criarHistoriaGratidao()"> Enviar História </button>
     <p id="addSucesso" style="display: none;">Mensagem adicionada com sucesso!</p>
   </section>
 
