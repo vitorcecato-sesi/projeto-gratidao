@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> História de Inspiração </title>
-    <link rel="stylesheet" href="../Css/histDeInspira.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> História de Inspiração </title>
+  <link rel="stylesheet" href="../Css/histDeInspira.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
+
 <body>
 
-      <!-- Section - Header + Nav (navegação entre as páginas) -->
-      <section class="headerNav-container">
-        <!-- Header -->
-        <header>
-          <a href="../index.html"> <img src="../Imagens/logoPagina.png" alt="Logo Página" /> </a> <!-- Deixar a imagem como um "botão" para a Home Page-->
-        </header>
-  
-        <!-- Nav's - "botões" para a navegação entre as páginas -->
-        <nav>
-          <a href="./gratidao.html"> Gratidão </a> <!-- Link para a página de gratidão -->
-          <a href="./acaoDeGracas.html"> Ação de Graças </a> <!-- Link para a página de ação de graças -->
-          <a href="./msgDeGratidao.html"> Mensagem de Gratidão </a> <!-- Link para a página de mensagem de gratidão -->
-          <a href="./histDeInspira.html" class="destaque"> História de Inspiração </a> <!-- Link para a página de história de inspiração -->
-          <a href="./grupo.html"> Sobre Nós </a> <!-- Link para a página de sobre nós (A class "destaque" é usada para indicar qual página está sendo usada) -->
-        </nav>
-      </section>
+  <!-- Section - Header + Nav (navegação entre as páginas) -->
+  <section class="headerNav-container">
+    <!-- Header -->
+    <header>
+      <a href="../index.html"> <img src="../Imagens/logoPagina.png" alt="Logo Página" /> </a>
+      <!-- Deixar a imagem como um "botão" para a Home Page-->
+    </header>
 
-      <article class="article">
-<h1 class="titulo">PESQUISE HISTÓRIAS INSPIRADORAS EM POUCOS CLIQUES...</h1>
-   <p class="paragrafos"> Para procurar histórias, siga essas instruções:</p>
-   <p class="paragrafos">1. Clique na barra de pesquisa;</p> 
-   <p class="paragrafos">2. Escreva uma palavra;</p> 
-   <p class="paragrafos">3. Leia histórias que contém a palavra digitada;</p> 
-   <p class="paragrafos">4. Repita o processo caso queira mais histórias.</p>
-</article>
+    <!-- Nav's - "botões" para a navegação entre as páginas -->
+    <nav>
+      <a href="./gratidao.html"> Gratidão </a> <!-- Link para a página de gratidão -->
+      <a href="./acaoDeGracas.html"> Ação de Graças </a> <!-- Link para a página de ação de graças -->
+      <a href="./msgDeGratidao.html"> Mensagem de Gratidão </a> <!-- Link para a página de mensagem de gratidão -->
+      <a href="./histDeInspira.html" class="destaque"> História de Inspiração </a>
+      <!-- Link para a página de história de inspiração -->
+      <a href="./grupo.html"> Sobre Nós </a>
+      <!-- Link para a página de sobre nós (A class "destaque" é usada para indicar qual página está sendo usada) -->
+    </nav>
+  </section>
 
-<section class="flexColuna">
+  <article class="article">
+    <h1 class="titulo">PESQUISE HISTÓRIAS INSPIRADORAS EM POUCOS CLIQUES...</h1>
+    <p class="paragrafos"> Para procurar histórias, siga essas instruções:</p>
+    <p class="paragrafos">1. Clique na barra de pesquisa;</p>
+    <p class="paragrafos">2. Escreva uma palavra;</p>
+    <p class="paragrafos">3. Leia histórias que contém a palavra digitada;</p>
+    <p class="paragrafos">4. Repita o processo caso queira mais histórias.</p>
+  </article>
+
+  <section class="flexColuna">
     <section class="contIco">
-        <i class="fa-solid fa-magnifying-glass"></i>
-<input class="pesquisar" placeholder= "Pesquise palavras em histórias motivacionais">
-</section>
+      <i onclick="buscarHistoriaPalavra()" class="fa-solid fa-magnifying-glass"></i>
+      <input class="pesquisar" id="historiaPalavra" placeholder="Pesquise palavras em histórias motivacionais">
+    </section>
 
-<section>
-    <!-- As histórias apareceram aqui. -->
-</section>
+    <!-- Mensagem de Loading -->
+    <p id="mensagemLoading" style="display: none;">Carregando...</p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
+    <section id="historias-container">
+      <p id="historiaNaoEncontrada" style="display: none;">História não encontrada.</p>
+      <!-- As histórias apareceram aqui. -->
+    </section>
 
-<a class="botaoCria" href="../Html/criaHistDeInspira.html">Escreva sua própria história</a>
-</section>
-      
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a class="botaoCria" href="../Html/criaHistDeInspira.html">Escreva sua própria história</a>
+  </section>
 
-    <section class="footer-container">
-        <footer>
-          <h3>
-            Grupo 3 🥑 <br />
-            2º Ano do Ensino Médio <br />
-            Desenvolvimento de Sistemas <br />
-            ⭐ Senai 2024 ⭐
-          </h3>
-  
-          <p>
-            Laura Betti <br />
-            Lucas Casagrande <br />
-            Milena
-          </p>
-  
-          <p>
-            Pietro Melle <br />
-            Pyetro Joaquim <br />
-            Vitor Geraldo
-          </p>
-  
-          <img src="../Imagens/logoGrupo3.png" alt="Logo do Grupo 3" />
-        </footer>
-      </section>
-    
-<script src="../JavaScript/histDeInspira.js"></script>
+
+  <section class="footer-container">
+    <footer>
+      <h3>
+        Grupo 3 🥑 <br />
+        2º Ano do Ensino Médio <br />
+        Desenvolvimento de Sistemas <br />
+        ⭐ Senai 2024 ⭐
+      </h3>
+
+      <p>
+        Laura Betti <br />
+        Lucas Casagrande <br />
+        Milena
+      </p>
+
+      <p>
+        Pietro Melle <br />
+        Pyetro Joaquim <br />
+        Vitor Geraldo
+      </p>
+
+      <img src="../Imagens/logoGrupo3.png" alt="Logo do Grupo 3" />
+    </footer>
+  </section>
+
+  <script src="../JavaScript/histDeInspira.js"></script>
 
 </body>
+
 </html>

@@ -12,7 +12,7 @@ tema varchar(100) not null
 
 create table HistoriasInspiradoras (
 id int identity(1,1) primary key,
-titulo varchar(50) not null,
+titulo nvarchar(max) not null,
 historia nvarchar(max) not null,
 imagemURL nvarchar(255)
 )
@@ -21,9 +21,9 @@ imagemURL nvarchar(255)
 insert into MensagensCurtas (mensagem, tema) values 
 ('A saúde é o bem mais precioso. Agradeço por poder desfrutar dela.', 'Gratidão pela saúde')
 
-insert into HistoriasInspiradoras (historia, imagemURL) values
+insert into HistoriasInspiradoras (titulo, historia, imagemURL) values
 (
-'Nunca desista dos seus sonhos. A jornada pode ser longa e cheia de
+'Sonhos', 'Nunca desista dos seus sonhos. A jornada pode ser longa e cheia de
 obstáculos, mas a recompensa final é sempre maior do que qualquer
 desafio. Lembre-se: a persistência é a chave para o sucesso.',
 'https://cdn.melhorespublicacoes.com.br/base/127/107/c0c/1431-951-child-playing-at-night.jpg'
@@ -158,7 +158,9 @@ select * from HistoriasInspiradoras
 
 select top 1 * from MensagensCurtas order by NEWID()
 
-select * from HistoriasInspiradoras where historia like '%que%'
+select * from HistoriasInspiradoras where historia like '%teste%'
+
+select * from MensagensCurtas where tema = 'Teste'
 
 -- Drop
 drop table MensagensCurtas

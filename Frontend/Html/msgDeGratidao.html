@@ -1,58 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Css/msgDeGratidao.css" />
-    <title>Mensagem de Gratidão</title>
-  </head>
-  <body>
 
-    <!-- Section - Header + Nav (navegação entre as páginas) -->
-    <section class="headerNav-container">
-      <!-- Header -->
-      <header>
-        <a href="../index.html"> <img src="../Imagens/logoPagina.png" alt="Logo Página" /> </a> <!-- Deixar a imagem como um "botão" para a Home Page-->
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Css/msgDeGratidao.css" />
+  <title>Mensagem de Gratidão</title>
+</head>
 
-      <!-- Nav's - "botões" para a navegação entre as páginas -->
-      <nav>
-        <a href="./gratidao.html"> Gratidão </a> <!-- Link para a página de gratidão -->
-        <a href="./acaoDeGracas.html"> Ação de Graças </a> <!-- Link para a página de ação de graças -->
-        <a href="./msgDeGratidao.html" class="destaque"> Mensagem de Gratidão </a> <!-- Link para a página de mensagem de gratidão -->
-        <a href="./histDeInspira.html"> História de Inspiração </a> <!-- Link para a página de história de inspiração -->
-        <a href="./grupo.html"> Sobre Nós </a> <!-- Link para a página de sobre nós (A class "destaque" é usada para indicar qual página está sendo usada) -->
-      </nav>
-    </section>
+<body>
+  <!-- Section - Header + Nav (navegação entre as páginas) -->
+  <section class="headerNav-container">
+    <!-- Header -->
+    <header>
+      <a href="../index.html">
+        <img src="../Imagens/logoPagina.png" alt="Logo Página" />
+      </a>
+      <!-- Deixar a imagem como um "botão" para a Home Page-->
+    </header>
 
-    
-    <section class="instrucao-container">
-        <h1> VEJA UMA MENSAGEM DE GRATIDÃO EM APENAS 1 CLIQUE... </h1>
-        <p class="motivacao"> Seu dia merece um upgrade: leia algo de gratidão! </p>
-        <article>
-            <p> Para conseguir, siga essas instruções:</p>
-            <p> 1. Encontre o botão com a mensagem de "Mensagem de Gratidão"; </p>
-            <p> 2. Clique neste botão para visualizar uma mensagem de gratidão instantaneamente com temas diversos; </p>
-            <p> 3. Se quiser mais gratidão, clique novamente para ver outra mensagem. </p>
-        </article>
-    </section>
+    <!-- Nav's - "botões" para a navegação entre as páginas -->
+    <nav>
+      <a href="./gratidao.html"> Gratidão </a>
+      <!-- Link para a página de gratidão -->
+      <a href="./acaoDeGracas.html"> Ação de Graças </a>
+      <!-- Link para a página de ação de graças -->
+      <a href="./msgDeGratidao.html" class="destaque">
+        Mensagem de Gratidão
+      </a>
+      <!-- Link para a página de mensagem de gratidão -->
+      <a href="./histDeInspira.html"> História de Inspiração </a>
+      <!-- Link para a página de história de inspiração -->
+      <a href="./grupo.html"> Sobre Nós </a>
+      <!-- Link para a página de sobre nós (A class "destaque" é usada para indicar qual página está sendo usada) -->
+    </nav>
+  </section>
 
-<br>
-<br>
-<br>
+  <section class="instrucao-container">
+    <h1>VEJA UMA MENSAGEM DE GRATIDÃO EM APENAS 1 CLIQUE...</h1>
+    <p class="motivacao">Seu dia merece um upgrade: leia algo de gratidão!</p>
+    <article>
+      <p>Para conseguir, siga essas instruções:</p>
+      <p>1. Encontre o botão com a mensagem de "Mensagem de Gratidão";</p>
+      <p>
+        2. Clique neste botão para visualizar uma mensagem de gratidão
+        instantaneamente com temas diversos;
+      </p>
+      <p>
+        3. Se quiser mais gratidão, clique novamente para ver outra mensagem.
+      </p>
+    </article>
+  </section>
 
-    <section class="botao-container">
-    <button> Mensagem de Gratidão </button>
+  <br />
+  <br />
+  <br />
+
+  <section class="mensagemEBotao">
+    <section class="botaoDar-container">
+      <button onclick="mensagemAleatoria()"> Mensagem de Gratidão </button>
     </section>
 
     <br>
     <br>
     <br>
-    
 
-    <section class="mensagem-container">
-        <p> A mensagem aparecerá aqui!</p>
+
+    <section class="mensagem-container" id="mensagem-container">
+      <p id="mensagemInicial"> A mensagem aparecerá aqui!</p>
+      <p id="loading">Carregando...</p>
+      <p id="msgTema"></p>
+      <p id="msgEscrita"></p>
     </section>
-    
-  </body>
+  </section>
+
+  <br>
+  <br>
+
+  <section class="criarMensagem-container">
+    <h1> Crie sua própria mensagem de gratidão:</h1>
+
+    <p>Insira o Tema</p>
+    <input type="text" id="userTemaGratidao" placeholder="Digite o tema da mensagem de gratidão" maxlength="100">
+
+    <p> Insira sua frase </p>
+    <input type="text" id="userFraseGratidao" placeholder="Digite a mensagem de gratidão:" maxlength="1000">
+    <!-- Aqui vai ser onde a pessoa coloca o texto, então mexe aqui, coloca a rota, profavor Vitor Geraldo Cecato -->
+
+    <br>
+    <br>
+    <br>
+
+    <button class="botaoEnviar" onclick="criarMensagemGratidao()"> Enviar </button>
+
+    <p id="addSucesso"> Mensagem adicionada com sucesso! </p>
+    <!-- Aqui vai ser onde a mensagem aparece após ser enviada, fazer com o script porfavor Vitor Geraldo Cecato -->
+
+  </section>
+
+  <!-- Section - Footer com informações, nomes e logo -->
+  <section class="footer-container">
+    <footer>
+      <h3>
+        Grupo 3 🥑 <br />
+        2º Ano do Ensino Médio <br />
+        Desenvolvimento de Sistemas <br />
+        ⭐ Senai 2024 ⭐
+      </h3>
+
+      <p>
+        Laura Betti <br />
+        Lucas Casagrande <br />
+        Milena
+      </p>
+
+      <p>
+        Pietro Melle <br />
+        Pyetro Joaquim <br />
+        Vitor Geraldo
+      </p>
+
+      <img src="../Imagens/logoGrupo3.png" alt="Logo do Grupo 3" />
+    </footer>
+  </section>
+  <script src="../JavaScript/msgDeGratidao.js"></script>
+</body>
+
 </html>
