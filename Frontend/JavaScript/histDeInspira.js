@@ -1,42 +1,58 @@
 // URL das Histórias
-const apiURLHistorias = "http://localhost:3000/historias"
+const apiURLHistorias = "http://localhost:3000/historias";
 
 async function buscarHistoriaPalavra() {
-    const userPalavraInput = document.getElementById("historiaPalavra")
-    const userPalavra = userPalavraInput.value.trim()
-    const containerHist = document.getElementById("historias-container")
-    const msgLoading = document.getElementById("mensagemLoading")
-    const msgNotFound = document.getElementById("historiaNaoEncontrada")
+  const userPalavraInput = document.getElementById("historiaPalavra");
+  const userPalavra = userPalavraInput.value.trim();
+  const containerHist = document.getElementById("historias-container");
+  const msgLoading = document.getElementById("mensagemLoading");
+  const msgNotFound = document.getElementById("historiaNaoEncontrada");
 
-    // Verifica se possui um valor inserido
-    if (!userPalavra) {
-      alert("Por favor, preencha o campo para buscar a história.")
-      return
+  // Verifica se possui um valor inserido
+  if (!userPalavra) {
+    alert("Por favor, preencha o campo para buscar a história.");
+    return;
+  }
+
+  msgLoading.style.display = "block";
+
+  try {
+    const response = await fetch(`${apiURLHistorias}/${userPalavra}`);
+    if (response.status === 404) {
+      msgNotFound.style.display = "block";
+    } else if (!response.ok) {
+      const error = await response.json();
+      alert(`Erro: ${error.error || "Erro desconhecido ao buscar história"}`);
+    } else {
+      // Obtém dados das histórias
+      const historias = await response.json();
+      console.log(historias);
+
+      historias.forEach((data) => {
+        // Criação de section para organização de dados
+        const paginaHistoria = document.createElement("section");
+        paginaHistoria.className = "paginaHistoria";
+        containerHist.appendChild(paginaHistoria);
+
+        // Criação de titulo para historia
+        const tituloHistoria = document.createElement("h3");
+        tituloHistoria.textContent = data.titulo;
+        paginaHistoria.appendChild(tituloHistoria);
+
+        // Criação de paragrafo para historia
+        const paragrafoHistoria = document.createElement("p");
+        paragrafoHistoria.textContent = data.historia;
+        paginaHistoria.appendChild(paragrafoHistoria);
+
+        // Criação de imagem para historia
+        const imagemHistoria = document.createElement("img");
+        imagemHistoria.src = data.imagemURL;
+        imagemHistoria.alt = `Imagem de ${historias.titulo}`;
+        paginaHistoria.appendChild(imagemHistoria);
+      });
     }
-
-    msgLoading.style.display = "block"    
-
-    try {
-      const response = await fetch(`${apiURLHistorias}/${userPalavra}`)
-      if (response.status === 404) {
-        msgNotFound.style.display = "block"
-      } else if (!response.ok) {
-        const error = await response.json();
-        alert(`Erro: ${error.error || "Erro desconhecido ao buscar usuário"}`);
-      } else {
-        const user = await response.json();
-        userDetails.innerHTML = `
-          <h2>Detalhes do Usuário</h2>
-          <p><strong>ID:</strong> ${user.id}</p>
-          <p><strong>Nome:</strong> ${user.nome}</p>
-          <p><strong>Idade:</strong> ${user.idade}</p>
-          <p><strong>Email:</strong> ${user.email}</p>
-          <p><strong>Contato:</strong> ${user.contato}</p>
-        `;
-        console.log(user)
-      }
-    } catch (error) {
-      alert("Erro ao buscar usuário. Verifique sua conexão.");
-      userDetails.innerHTML = "";
-    }
+  } catch (error) {
+    alert("Erro ao buscar histórias. Verifique sua conexão.");
+  }
+  msgLoading.style.display = "none";
 }
