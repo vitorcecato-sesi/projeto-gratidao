@@ -120,7 +120,7 @@ body {
 .titulo {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    font-size: 3em;
     justify-content: center;
     animation: fadeIn 3s;
 }
@@ -128,22 +128,19 @@ body {
 .article {
     display: flex;
     flex-direction: row;
+    padding: 2.5em;
     justify-content: space-around;
     align-items: center;
     animation: fadeIn 3s;
 }
 
-.tituloParagrafo {
-    display: flex;
-    flex-direction: column;
+.paragrafo1 {
     align-items: center;
-    animation: fadeIn 3s;
-
-}
-
-.paragrafos {
-    width: 30vw;
-    height: 40vh;
+    justify-content: center;
+    background-color: #BF0504;
+    color: white;
+    width: 40vw;
+    font-size: 1.3em;
     text-align: center;
     box-shadow: 0px 0px 50px gray;
     padding: 3vw;
@@ -151,14 +148,53 @@ body {
     animation: fadeIn 3s;
 }
 
-.paragrafos:hover {
+.paragrafo2 {
+    align-items: center;
+    justify-content: center;
+    background-color: #b66e3f;
+    color: white;
+    width: 40vw;
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0px 0px 50px gray;
+    padding: 3vw;
+    border-radius: 2vw;
+    animation: fadeIn 3s;
+}
+
+.paragrafo3 {
+    align-items: center;
+    justify-content: center;
+    background-color: #F56004;
+    color: white;
+    width: 40vw;
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0px 0px 50px gray;
+    padding: 3vw;
+    border-radius: 2vw;
+    animation: fadeIn 3s;
+}
+
+.paragrafo1:hover {
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: all 0.5s;
+    animation: fadeIn 3s;
+}
+
+.paragrafo2:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    animation: fadeIn 3s;
+}
+
+.paragrafo3:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
     animation: fadeIn 3s;
 }
 
 .imagensArt {
-    margin-top: 5.8%;
     width: 35vw;
     height: 50vh;
     border-radius: 5vw;
@@ -171,43 +207,6 @@ body {
     border-radius: 1vw;
     animation: fadeIn 3s;
 }
-
-.titulo1 {
-    background-color: #BF0504;
-    text-align: center;
-    justify-content: center;
-    width: 15vw;
-    border-radius: 0.5vw;
-    padding: 0.3vw;
-    animation: fadeIn 3s;
-
-}
-
-.titulo2 {
-    background-color: #F56004;
-    text-align: center;
-    justify-content: center;
-    width: 15vw;
-    border-radius: 0.5vw;
-    padding: 0.3vw;
-    animation: fadeIn 3s;
-
-}
-
-.titulo3 {
-    background-color: #BF0504;
-    text-align: center;
-    justify-content: center;
-    width: 15vw;
-    border-radius: 0.5vw;
-    padding: 0.3vw;
-    animation: fadeIn 3s;
-
-}
-
-
-
-
 
 /* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
 .footer-container footer {
