@@ -70,7 +70,7 @@ async function buscarHistoriaPalavra() {
                 const imagemHistoria = document.createElement("img")
                 imagemHistoria.className = "imagemHistoria"
                 imagemHistoria.src = data.imagemURL
-                imagemHistoria.alt = `Imagem de ${historias.titulo}`
+                imagemHistoria.alt = `Imagem de ${data.titulo}`
                 paginaHistoria.appendChild(imagemHistoria)
                 imagemHistoria.id = `imagem-${contador}`
             });
