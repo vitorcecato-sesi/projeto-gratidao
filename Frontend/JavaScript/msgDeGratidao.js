@@ -2,6 +2,8 @@ async function mensagemAleatoria() {
     // Section onde será inserido a mensagem aleátoria
     const msgContainer = document.getElementById("mensagem-container")
 
+    document.getElementById("loading").style.display = "block";
+
     try {
         const response = await fetch(`http://localhost:3000/mensagens/random`)
         // Se não tiver resposta ok, será dado um novo erro.
@@ -9,17 +11,20 @@ async function mensagemAleatoria() {
             throw new Error("Erro ao buscar mensagem aleátoria.")
         }
 
-        document.getElementById("loadingMessage").style.display = "block"
+        document.getElementById("mensagemInicial").style.display = "none"
+
+        // Configura o Adequa o Css para o container
+        msgContainer.style.flexDirection = "column"
 
         // Data recebe a resposta
         const data = await response.json()
         console.log(data[0])
         // Cria o paragráfo com o Tema
-        const msgTema = document.createElement("p")
+        const msgTema = document.getElementById("msgTema")
         msgTema.textContent = `Tema: ${data[0].tema}` 
 
         // Cria um paragráfo com a mensagem
-        const msgEscrita = document.createElement("p")
+        const msgEscrita = document.getElementById("msgEscrita")
         msgEscrita.textContent = `Mensagem: ${data[0].mensagem}`
 
         // Adiciona os elementos dentro da section
@@ -30,5 +35,5 @@ async function mensagemAleatoria() {
         console.error("Erro ao buscar dados da mensagem:", error)
     }
 
-    document.getElementById("loadingMessage").style.display = "none"
+    document.getElementById("loading").style.display = "none"
 }
