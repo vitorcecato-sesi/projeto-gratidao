@@ -1,3 +1,6 @@
+// Link da URL Mensagens
+const apiURLMsg = "http://localhost:3000/mensagens/"
+
 async function mensagemAleatoria() {
     // Section onde será inserido a mensagem aleátoria
     const msgContainer = document.getElementById("mensagem-container")
@@ -18,14 +21,14 @@ async function mensagemAleatoria() {
 
         // Data recebe a resposta
         const data = await response.json()
-        console.log(data[0])
+        console.log(data)
         // Cria o paragráfo com o Tema
         const msgTema = document.getElementById("msgTema")
-        msgTema.textContent = `Tema: ${data[0].tema}` 
+        msgTema.textContent = `Tema: ${data.tema}` 
 
         // Cria um paragráfo com a mensagem
         const msgEscrita = document.getElementById("msgEscrita")
-        msgEscrita.textContent = `Mensagem: ${data[0].mensagem}`
+        msgEscrita.textContent = `Mensagem: ${data.mensagem}`
 
         // Adiciona os elementos dentro da section
         msgContainer.appendChild(msgTema)
@@ -36,4 +39,48 @@ async function mensagemAleatoria() {
     }
 
     document.getElementById("loading").style.display = "none"
+}
+
+async function criarMensagemGratidao() {
+
+    // Pega elementos
+    const msgSucesso = document.getElementById("addSucesso")
+
+    // Obtém os inputs
+    const inputTema = document.getElementById("userTemaGratidao")
+    const inputMensagem = document.getElementById("userFraseGratidao")
+
+    // Retira os espaços desnecessários das mensagens
+    const tema = inputTema.value.trim()
+    const mensagem = inputMensagem.value.trim()
+
+    // Confere se os campos foram preenchidos
+    if (!tema && !mensagem) {
+        alert("Por favor, preencha todos os campos corretamente.")
+        return
+    } else if (!tema) {
+        alert("Por favor, preencha o campo do Tema corretamente.")
+        return
+    } else if (!mensagem) {
+        alert("Por favor, preencha o campo da Mensagem corretamente.")
+        return
+    }
+
+    // Metodo POST para adicionar um novo usuário
+    const response = await fetch(apiURLMsg, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tema, mensagem })
+    })
+
+    if (response.ok) {
+        msgSucesso.style.display = "block"
+        // Limpa os campos do formulário
+        inputTema.value = ""
+        inputMensagem.value = ""
+
+      } else {
+        const error = await response.json();
+        alert(`Erro ao adicionar mensagem: ${error.message}`);
+      }
 }

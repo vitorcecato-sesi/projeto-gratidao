@@ -77,12 +77,16 @@
   <section class="criarMensagem-container">
     <h1> Crie sua própria mensagem de gratidão:</h1>
 
+    <p>Insira o Tema</p>
+    <input type="text" id="userTemaGratidao" placeholder="Digite o tema da mensagem de gratidão" maxlength="100">
+
     <p> Insira sua frase </p>
+    <input type="text" id="userFraseGratidao" placeholder="Digite a mensagem de gratidão:" maxlength="1000">
     <!-- Aqui vai ser onde a pessoa coloca o texto, então mexe aqui, coloca a rota, profavor Vitor Geraldo Cecato -->
 
-    <button class="botaoEnviar"> Enviar </button>
+    <button class="botaoEnviar" onclick="criarMensagemGratidao()"> Enviar </button>
 
-    <p> Mensagem adicionada com sucesso! </p>
+    <p id="addSucesso" style="display: none;"> Mensagem adicionada com sucesso! </p>
     <!-- Aqui vai ser onde a mensagem aparece após ser enviada, fazer com o script porfavor Vitor Geraldo Cecato -->
 
   </section>
