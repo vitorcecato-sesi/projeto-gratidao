@@ -1,106 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
-@font-face {
-    font-family: Parkinsans;
-    src: url(../Fonte/Parkinsans-Bold.ttf);
-}
-
-body {
-    font-family: Parkinsans;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Efeito de aparecer com o tempo --------------------------------------------------------------------------------------------------------------------------------------- */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        /* Começa com a opacidade 0, para ficar invisivel */
-    }
-
-    to {
-        opacity: 1;
-        /* Termina com a opacidade 1 */
-    }
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
-.headerNav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 17vh;
-}
-
-.headerNav-container header {
-    flex: 0;
-    /* Faz o header ocupar o espaço disponível */
-}
-
-.headerNav-container nav {
-    flex: 2;
-    /* Faz o nav ocupar mais espaço que o header */
-    display: flex;
-    justify-content: space-around;
-}
-
-.headerNav-container img {
-    width: 20vw;
-    height: auto;
-    transition: all 0.5s ease;
-}
-
-.headerNav-container img:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease;
-}
-
-.headerNav-container nav a {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: white;
-    transition: color 0.5s ease;
-    background-color: #372522;
-    border-radius: 20px;
-    padding: 0.7em;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
-}
-
-.headerNav-container nav a.destaque {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: #b66e3f;
-    transition: color 0.5s ease;
-    background-color: #372522;
-    border-radius: 20px;
-    padding: 0.7em;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
-}
-
-.headerNav-container nav a:hover {
-    color: #b66e3f;
-    transform: scale(1.1);
-    /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
-    transition: color 0.5s ease;
-    /* Tempo de transição da cor */
-    transition: all 0.5s ease;
-    /* Faz com que a transição seja mais suave */
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
@@ -109,29 +10,29 @@ body {
 
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
 @font-face {
-    font-family: Parkinsans;
-    src: url(../Fonte/Parkinsans-Bold.ttf);
-    /* Link da pasta onde a fonte está */
+  font-family: Parkinsans;
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+  /* Link da pasta onde a fonte está */
 }
 
 /* Definir a fonte para todo o body(corpo) da página */
 body {
-    font-family: Parkinsans;
+  font-family: Parkinsans;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        /* Começa com a opacidade 0, para ficar invisivel */
-    }
+  from {
+    opacity: 0;
+    /* Começa com a opacidade 0, para ficar invisivel */
+  }
 
-    to {
-        opacity: 1;
-        /* Termina com a opacidade 1 */
-    }
+  to {
+    opacity: 1;
+    /* Termina com a opacidade 1 */
+  }
 }
 
 /* " animation: fadeIn 3s; "  -> necessário colocar esse comando nos container para funcionar a animação */
@@ -140,127 +41,180 @@ body {
 
 /* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
 .headerNav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 17vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 17vh;
 }
 
 /* Mexe no Header */
 .headerNav-container header {
-    flex: 0;
-    /* Faz o header ocupar o espaço disponível */
+  flex: 0;
+  /* Faz o header ocupar o espaço disponível */
 }
 
 /* Mexe no Nav */
 .headerNav-container nav {
-    flex: 2;
-    /* Faz o nav ocupar mais espaço que o header */
-    display: flex;
-    justify-content: space-around;
+  flex: 2;
+  /* Faz o nav ocupar mais espaço que o header */
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Mexe na imagem dentro do container (apenas a do Header) */
 .headerNav-container img {
-    width: 20vw;
-    height: auto;
-    transition: all 0.5s ease;
+  width: 20vw;
+  height: auto;
+  transition: all 0.5s ease;
 }
 
 /* Ao passar o mouse por cima da imagem, da um efeito de aumento */
 .headerNav-container img:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho da imagem */
-    transition: all 0.5s ease;
-    /* Tempo de transição */
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem */
+  transition: all 0.5s ease;
+  /* Tempo de transição */
 }
 
 /* Mexe no Nav, especificadamente nos A (links) */
 .headerNav-container nav a {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: white;
-    transition: color 0.5s ease;
-    background-color: #372522;
-    border-radius: 20px;
-    padding: 0.7em;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
 }
 
 /* Mexe no Nav, especificadamente em um que está com a CLASS="destaque", para dar um efeito de que está naquela página */
 .headerNav-container nav a.destaque {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: #b66e3f;
-    transition: color 0.5s ease;
-    background-color: #372522;
-    border-radius: 20px;
-    padding: 0.7em;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #b66e3f;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
 }
 
 /* Ao passar o mouse por cima dos links, da um efeito de aumento */
 .headerNav-container nav a:hover {
-    color: #b66e3f;
-    transform: scale(1.1);
-    /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
-    transition: color 0.5s ease;
-    /* Tempo de transição da cor */
-    transition: all 0.5s ease;
-    /* Faz com que a transição seja mais suave */
+  color: #b66e3f;
+  transform: scale(1.1);
+  /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transition: color 0.5s ease;
+  /* Tempo de transição da cor */
+  transition: all 0.5s ease;
+  /* Faz com que a transição seja mais suave */
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* BOTÃO PARA ENVIAR A HISTÓRIA */
+/* TÍTULO DA PÁGINA ❕ ------------------------------------------------------------------------------------------------------------ */
+.tituloPagina {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1em;
+  color: #b66e3f;
+  font-size: 3.5em;
+  animation: fadeIn 3s;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INPUT's (colocar os textos do usuário) ❕ -------------------------------------------------------------------------------------- */
 .criarMensagem-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5em;
-    animation: fadeIn 3s;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  animation: fadeIn 3s;
 }
 
+/* Mexe no P (parágrafo) */
+.criarMensagem-container p {
+  padding: 1.5em;
+  font-size: 1.5em;
+}
+
+/* Mexe no Input, onde o usuário vai escrever sua mensagem e tema */
+.criarMensagem-container input {
+  border: solid 2px #f56004;
+  padding: 1em;
+  border-radius: 20px;
+  overflow: auto;
+  font-size: 1.3em;
+  font-family: Parkinsans;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+/* Focus serve para quando clicado e escrever, ele fica maior, mais destacado */
+.criarMensagem-container input:focus {
+  box-shadow: 0px 0px 10px #b66e3f;
+  border: solid 2px #b66e3f;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* BOTÃO PARA ENVIAR A HISTÓRIA ❕ ------------------------------------------------------------------------------------------------ */
+.botaoEnviar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3em;
+  padding-top: 1em;
+  animation: fadeIn 3s;
+}
+
+/* Mexe no botão */
 button {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: white;
-    font-family: Parkinsans;
-    background-color: #f56004;
-    border-radius: 20px;
-    padding: 0.7em;
-    width: 10em;
-    cursor: pointer;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  font-family: Parkinsans;
+  background-color: #f56004;
+  border-radius: 20px;
+  padding: 0.7em;
+  width: 10em;
+  cursor: pointer;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
 }
 
+/* Ao passar o maouse por cima do botão, ele da um efeito de aumentar e mudar a cor da fonte */
 button:hover {
-    color: #372522;
-    transform: scale(1.1);
+  color: #372522;
+  transform: scale(1.1);
 }
 
-/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
 .footer-container footer {
-    display: flex;
-    background-color: #b66e3f;
-    color: white;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10%;
-    border-radius: 20px;
-    animation: fadeIn 3s;
+  display: flex;
+  background-color: #b66e3f;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 20px;
+  animation: fadeIn 3s;
 }
 
+/* Mexe na Imagem */
 .footer-container img {
-    width: 10%;
-    height: auto;
-    animation: fadeIn 3s;
+  width: 10%;
+  height: auto;
+  animation: fadeIn 3s;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------------------- */
