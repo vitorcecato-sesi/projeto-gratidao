@@ -1,17 +1,28 @@
+/* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
+/* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
 @font-face {
     font-family: Parkinsans;
     src: url(./Fonte/Parkinsans-Bold.ttf);
+    /* Link da pasta onde a fonte está */
 }
 
+/* Definir a fonte para todo o body(corpo) da página */
 body {
     font-family: Parkinsans;
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Efeito de aparecer com o tempo --------------------------------------------------------------------------------------------------------------------------------------- */
+/* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -24,9 +35,11 @@ body {
     }
 }
 
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* " animation: fadeIn 3s; "  -> necessário colocar esse comando nos container para funcionar a animação */
 
-/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
 .headerNav-container {
     display: flex;
     justify-content: space-between;
@@ -34,11 +47,13 @@ body {
     height: 17vh;
 }
 
+/* Mexe no Header */
 .headerNav-container header {
     flex: 0;
     /* Faz o header ocupar o espaço disponível */
 }
 
+/* Mexe no Nav */
 .headerNav-container nav {
     flex: 2;
     /* Faz o nav ocupar mais espaço que o header */
@@ -46,17 +61,22 @@ body {
     justify-content: space-around;
 }
 
+/* Mexe na imagem dentro do container (apenas a do Header) */
 .headerNav-container img {
     width: 20vw;
     height: auto;
     transition: all 0.5s ease;
 }
 
+/* Ao passar o mouse por cima da imagem, da um efeito de aumento */
 .headerNav-container img:hover {
     transform: scale(1.1);
+    /* Aumenta o tamanho da imagem */
     transition: all 0.5s ease;
+    /* Tempo de transição */
 }
 
+/* Mexe no Nav, especificadamente nos A (links) */
 .headerNav-container nav a {
     text-decoration: none;
     font-size: 1.3em;
@@ -69,6 +89,7 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Mexe no Nav, especificadamente em um que está com a CLASS="destaque", para dar um efeito de que está naquela página */
 .headerNav-container nav a.destaque {
     text-decoration: none;
     font-size: 1.3em;
@@ -81,6 +102,7 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Ao passar o mouse por cima dos links, da um efeito de aumento */
 .headerNav-container nav a:hover {
     color: #b66e3f;
     transform: scale(1.1);
@@ -90,6 +112,8 @@ body {
     transition: all 0.5s ease;
     /* Faz com que a transição seja mais suave */
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* --------------------------------------------------------------------------------------------------------- */
 
@@ -247,12 +271,12 @@ body {
     gap: 10%;
     border-radius: 20px;
     animation: fadeIn 3s;
-  }
-  
-  .footer-container img {
+}
+
+.footer-container img {
     width: 10%;
     height: auto;
     animation: fadeIn 3s;
-  }
-  
-  /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
