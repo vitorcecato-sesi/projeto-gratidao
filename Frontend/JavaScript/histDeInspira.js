@@ -50,21 +50,25 @@ async function buscarHistoriaPalavra() {
                 paginaHistoria.className = "paginaHistoria"
                 containerHist.appendChild(paginaHistoria)
                 paginaHistoria.id = `pg-${contador}`
+            
 
                 // Criação de titulo para historia
                 const tituloHistoria = document.createElement("h3")
+                tituloHistoria.className = "tituloHistoria"
                 tituloHistoria.textContent = data.titulo
                 paginaHistoria.appendChild(tituloHistoria)
                 tituloHistoria.id = `titulo-${contador}`
 
                 // Criação de paragrafo para historia
                 const paragrafoHistoria = document.createElement("p")
+                paragrafoHistoria.className = "paragrafoHistoria"
                 paragrafoHistoria.textContent = data.historia
                 paginaHistoria.appendChild(paragrafoHistoria)
                 paragrafoHistoria.id = `paragrafo-${contador}`
 
                 // Criação de imagem para historia
                 const imagemHistoria = document.createElement("img")
+                imagemHistoria.className = "imagemHistoria"
                 imagemHistoria.src = data.imagemURL
                 imagemHistoria.alt = `Imagem de ${historias.titulo}`
                 paginaHistoria.appendChild(imagemHistoria)
