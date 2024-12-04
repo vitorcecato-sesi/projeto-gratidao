@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: Parkinsans;
@@ -95,7 +101,7 @@ body {
   align-items: center;
   text-align: center;
   border-radius: 20px;
-  padding: 1em;
+  padding: 4em;
   box-shadow: 0px 0px 50px gray;
   animation: fadeIn 3s;
 }
@@ -125,8 +131,8 @@ body {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* BOTÃO ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-.botao-container {
+/* BOTÃO DE DAR MENSAGEM ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.botaoDar-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,8 +159,95 @@ button:hover {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.mensagemEBotao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 3s;
+}
+
 /* MENSAGEM QUE APARECE ------------------------------------------------------------------------------------------------------------------------------------------------- */
 .mensagem-container {
     display: flex;
-    background-color: #372522;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #f56004;
+    width: 30em;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.3em;
+    padding: 1em;
+    animation: fadeIn 3s;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CRIAR FRASE */
+.criarMensagem-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+  animation: fadeIn 3s;
+}
+
+.criarMensagem-container h1{
+  font-size: 3em;
+}
+
+.criarMensagem-container p {
+  padding: 2em;
+  font-size: 1.5em;
+}
+
+
+/* BOTÃO DE ENVIAR MENSAGEM */
+.botaoEnviar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 3s;
+}
+
+.criarMensagem-container button {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  font-family: Parkinsans;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  width: 10em;
+  cursor: pointer;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+.criarMensagem-container button:hover {
+  color: #f56004;
+  transform: scale(1.1);
+}
+
+
+/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+.footer-container footer {
+  display: flex;
+  background-color: #b66e3f;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 20px;
+  animation: fadeIn 3s;
+}
+
+.footer-container img {
+  width: 10%;
+  height: auto;
+  animation: fadeIn 3s;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
