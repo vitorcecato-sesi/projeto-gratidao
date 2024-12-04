@@ -32,6 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 17vh;
+    
 }
 
 .headerNav-container header {
@@ -114,7 +115,7 @@ body {
 .slides img {
     margin-left: -21%;
     height: 90vh;
-    width: 99.099vw;
+    width: 99.12vw;
 }
 
 .texto {
@@ -162,6 +163,49 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     animation: fadeIn 3s;
 }
+
+.botaoTrad {
+display: flex;
+flex-direction: row;
+background-color: rgb(224, 224, 224);
+border-radius: 5vw;
+width: 8vw;
+height: 3.5vw;
+align-items: center;
+justify-content: space-around;
+padding-top: 0.3vw;
+margin-left: 91%;
+margin-top: -2%;
+animation: fadeIn 3s;
+
+}
+
+.botaoBra {
+ border-radius: 5vw;
+ width: 3vw;
+ height: 3vw;
+ cursor: pointer;
+ animation: fadeIn 3s;
+}
+
+.botaoBra:hover {
+    border: 0.2vw solid rgb(189, 189, 189);
+   }
+
+
+.botaoUsa {
+    border-radius: 5vw;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    animation: fadeIn 3s;
+}
+
+.botaoUsa:hover {
+    border: 0.2vw solid rgb(189, 189, 189);
+   }
+
+
 
 .navImg {
     width: 98.3vw;

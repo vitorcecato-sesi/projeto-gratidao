@@ -29,7 +29,7 @@
 
 
 
-    <section class="slider">
+    <section id="slider" class="slider">
         <section class="slides">
             <img src="Imagens/homeImg1.png" alt="Imagem 1" />
             <h2 class="texto">
@@ -68,15 +68,15 @@
 
     </section>
 
-            <button id="anterior" class="botoes" onclick="proxSlide(-1)"> < </button>
-            <button id="proximo" class="botoes" onclick="proxSlide(1)"> > </button>
+            <button id="anterior" class="botoes"> < </button>
+            <button id="proximo" class="botoes"> > </button>
 
             <section class="navImg">
-                <a class="bolinhas" onclick="slideAtual(1)"></a> 
-                <a class="bolinhas" onclick="slideAtual(2)"></a> 
-                <a class="bolinhas" onclick="slideAtual(3)"></a> 
-                <a class="bolinhas" onclick="slideAtual(4)"></a> 
-                <a class="bolinhas" onclick="slideAtual(5)"></a> 
+                <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(0)"></a> 
+                <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(1)"></a> 
+                <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(2)"></a> 
+                <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(3)"></a> 
+                <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(4)"></a> 
             </section>
         
 
@@ -84,11 +84,15 @@
 <br>
 <br>
 
+<section class="botaoTrad">
+<a onclick="traduzirBrasil()"><img class="botaoBra" src="./Imagens/bandeiraBrasa.png"></a>
+<a onclick="traduzirIngles()"><img class="botaoUsa" src="./Imagens/bandeiraUsa.png"></a>
+</section>
 
             <article class="article">
-                <h2 class="titulo1"> Conceito </h2>
+                <h2 id="titulo1" class="titulo1"> Conceito </h2>
                 <br>
-                <p class="paragrafos"> 
+                <p id="paragrafo1" class="paragrafos"> 
                     A gratidão é um sentimento de reconhecimento e uma emoção de querer agradecer outro indivíduo 
                     por ele ter feito alguma ação, auxílio ou favor sem esperar algo em troca. Essa atitude gera 
                     alegria para quem está recebendo ajuda e também para a pessoa que realizou a ação, trazendo assim 
@@ -102,9 +106,9 @@
             <br>
 
             <article class="article">
-                <h2 class="titulo2"> Relação </h2>
+                <h2 id="titulo2" class="titulo2"> Relação </h2>
                 <br>
-                <p class="paragrafos">
+                <p id="paragrafo2" class="paragrafos">
                     O Thanksgiving Day (Dia de Ação de Graças), é uma data comemorativa, mais popular nos Estados Unidos, 
                     que é celebrada todos os anos na 4ª quinta feira de Novembro. Em inglês, “thanksgiving” significa 
                     agradecer, e esse é um dia de agradecimento em que as famílias se reúnem e celebram a colheita e também 
