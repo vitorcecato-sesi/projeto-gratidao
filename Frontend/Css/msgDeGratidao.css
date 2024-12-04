@@ -109,6 +109,8 @@ body {
 .instrucao-container h1 {
   color: #f56004;
   font-size: 3em;
+  width: 100em;
+  padding-bottom: 1em;
   text-shadow: 0px 0px 6px black;
 }
 
@@ -122,6 +124,7 @@ body {
 .instrucao-container p.motivacao {
   color: #b66e3f;
   font-size: 1.3em;
+  padding-bottom: 1em;
   font-style: italic;
 }
 
