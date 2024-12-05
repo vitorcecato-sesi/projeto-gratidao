@@ -69,7 +69,12 @@ async function buscarHistoriaPalavra() {
                 // Criação de imagem para historia
                 const imagemHistoria = document.createElement("img")
                 imagemHistoria.className = "imagemHistoria"
-                imagemHistoria.src = `../Imagens/BancoDeDados/${data.imagemURL}.png`
+                const stringURL = `${data.imagemURL}`
+                if (stringURL.length <= 8) {
+                    imagemHistoria.src = `../Imagens/BancoDeDados/${data.imagemURL}.png`
+                } else {
+                    imagemHistoria.src = data.imagemURL
+                }
                 imagemHistoria.alt = `Imagem de ${data.titulo}`
                 paginaHistoria.appendChild(imagemHistoria)
                 imagemHistoria.id = `imagem-${contador}`
