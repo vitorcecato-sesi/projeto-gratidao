@@ -108,7 +108,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
 //.
 
 // Historias
-    exports.getHistoriaByPalavra = (palavra, callback) => {
+  exports.getHistoriaByPalavra = (palavra, callback) => {
         const connection = createConnection(); // Cria a conexão com o banco de dados
 
         connection.on("connect", (err) => {
@@ -136,7 +136,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       });
 
         // Ao completar a consulta, retorna as histórias encontradas
-        request.on("requestCompleted", (rowCount) => {
+        request.on("requestCompleted", () => {
             callback(null, result); // Retorna as histórias encontradas
         });
 
@@ -144,7 +144,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
         });
 
         connection.connect(); // Inicia a conexão
-    };
+  };
 
     exports.createHistoria = (data, callback) => {
         const connection = createConnection(); // Cria a conexão com o banco de dados
