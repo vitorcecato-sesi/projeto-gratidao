@@ -10,7 +10,7 @@
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: Parkinsans;
-  src: url(../Fonte/Parkinsans-Bold.ttf);  /* Link da pasta onde a fonte está */
+  src: url(../Fonte/Parkinsans-Bold.ttf); /* Link da pasta onde a fonte está */
 }
 
 /* Definir a fonte para todo o body(corpo) da página */
@@ -41,6 +41,7 @@ body {
   align-items: center;
   height: 17vh;
 }
+
 /* Mexe no Header */
 .headerNav-container header {
   flex: 0; /* Faz o header ocupar o espaço disponível */
@@ -95,7 +96,9 @@ body {
 /* Ao passar o mouse por cima dos links, da um efeito de aumento */
 .headerNav-container nav a:hover {
   color: #b66e3f;
-  transform: scale(1.1); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transform: scale(
+    1.1
+  ); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
   transition: color 0.5s ease; /* Tempo de transição da cor */
   transition: all 0.5s ease; /* Faz com que a transição seja mais suave */
 }
@@ -199,3 +202,65 @@ body {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 720px) {
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
+  .headerNav-container {
+    flex-direction: column; /* Muda a direção do flex para coluna */
+    height: auto; /* Permite que a altura se ajuste automaticamente */
+  }
+
+  .headerNav-container img {
+    width: 30vw; /* Aumenta a largura da imagem do header */
+  }
+
+  .headerNav-container nav {
+    flex-direction: column; /* Muda a direção do nav para coluna */
+    align-items: center; /* Centraliza os itens */
+    padding-bottom: 2em;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .headerNav-container nav a {
+    font-size: 1.1em; /* Diminui o tamanho da fonte dos links */
+    padding: 1em; /* Ajusta o padding */
+  }
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* CONCLUSÃO (article + elementos) ❕ ----------------------------------------------------------------------------------------- */
+  .conclusao-container h1 {
+    font-size: 2.5em; /* Diminui o tamanho do título */
+    width: 89vw; /* Ajusta a largura */
+  }
+
+  .conclusao-container article {
+    width: 80vw; /* Aumenta a largura do artigo */
+    font-size: 1.1em; /* Diminui o tamanho da fonte do artigo */
+  }
+
+  .imgGrupoLogo-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgGrupoLogo-container img {
+    width: 70vw; /* Aumenta a largura da imagem do grupo/logo */
+    padding: 2em; /* Ajusta o padding */
+  }
+
+  .nomes {
+    font-size: 1.1em; /* Diminui o tamanho da fonte dos nomes */
+    gap: 10%; /* Ajusta o espaço entre os nomes */
+  }
+
+  .footer-container footer {
+    flex-direction: column; /* Muda a direção do footer para coluna */
+    gap: 20px; /* Ajusta o espaço entre os itens do footer */
+  }
+
+  .footer-container img {
+    width: 30vw; /* Aumenta a largura da imagem do footer */
+    height: auto;
+  }
+}
