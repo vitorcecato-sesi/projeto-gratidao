@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/criaHistDeInspira.css">
     <title> Criar sua História de Inspiração </title>
 </head>
 <body>
     
+<!-- Section - Header + Nav (navegação entre as páginas) -->
+<section class="headerNav-container">
+    <!-- Header -->
+    <header>
+      <a href="../index.html"> <img src="../Imagens/logoPagina.png" alt="Logo Página" /> </a> <!-- Deixar a imagem como um "botão" para a Home Page-->
+    </header>
+
+  <!-- Nav's - "botões" para a navegação entre as páginas -->
+    <nav>
+      <a href="./gratidao.html"> Gratidão </a> <!-- Link para a página de gratidão -->
+      <a href="./acaoDeGracas.html"> Ação de Graças </a> <!-- Link para a página de ação de graças -->
+      <a href="./msgDeGratidao.html"> Mensagem de Gratidão </a> <!-- Link para a página de mensagem de gratidão -->
+      <a href="./histDeInspira.html" class="destaque"> História de Inspiração </a> <!-- Link para a página de história de inspiração -->
+      <a href="./grupo.html"> Sobre Nós </a> <!-- Link para a página de sobre nós (A class "destaque" é usada para indicar qual página está sendo usada) -->
+    </nav>
+  </section>
+
+  <h1 class="tituloPagina"> CRIANDO SUA PRÓPRIA HISTÓRIA </h1>
+
+  <section class="criarMensagem-container">
+
+    <p>Título</p>
+    <input type="text" id="userTituloGratidao" placeholder="Digite o título da sua história">
+    <p>Insira sua história</p>
+    <input type="text" id="userHistoriaGratidao" placeholder="Digite sua história">
+    <p>URL da imagem (link)</p>
+    <input type="text" id="userImagemGratidao" placeholder="Insira o link da sua imagem aqui (ou deixe vazio)" maxlength="255">
+  </section>
+
+  <section class="botaoEnviar-container">
+  <button onclick="criarHistoriaGratidao()"> Enviar História </button>
+    <p id="addSucesso" style="display: none;">Mensagem adicionada com sucesso!</p>
+  </section>
+
+
+  <!-- Section - Footer com informações, nomes e logo -->
+  <section class="footer-container">
+    <footer>
+      <h3>
+        Grupo 3 🥑 <br />
+        2º Ano do Ensino Médio <br />
+        Desenvolvimento de Sistemas <br />
+        ⭐ Senai 2024 ⭐
+      </h3>
+
+      <p>
+        Laura Betti <br />
+        Lucas Casagrande <br />
+        Milena
+      </p>
+
+      <p>
+        Pietro Melle <br />
+        Pyetro Joaquim <br />
+        Vitor Geraldo
+      </p>
+
+      <img src="../Imagens/logoGrupo3.png" alt="Logo do Grupo 3" />
+    </footer>
+  </section>
+  <script src="../JavaScript/criaHistDeInspira.js"></script>
 </body>
 </html>

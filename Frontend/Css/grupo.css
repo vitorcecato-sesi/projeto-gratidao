@@ -1,20 +1,79 @@
+<<<<<<< HEAD
+/* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: Parkinsans;
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+  /* Link da pasta onde a fonte está */
+}
+
+/* Definir a fonte para todo o body(corpo) da página */
+=======
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: Parkinsans;
   src: url(../Fonte/Parkinsans-Bold.ttf);
 }
 
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 body {
   font-family: Parkinsans;
 }
 
+<<<<<<< HEAD
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* Começa com a opacidade 0, para ficar invisivel */
+  }
+
+  to {
+    opacity: 1;
+    /* Termina com a opacidade 1 */
+  }
+}
+
+/* " animation: fadeIn 3s; "  -> necessário colocar esse comando nos container para funcionar a animação */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
+=======
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 .headerNav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+  height: 17vh;
+}
+
+/* Mexe no Header */
+.headerNav-container header {
+  flex: 0;
+  /* Faz o header ocupar o espaço disponível */
+}
+
+/* Mexe no Nav */
+.headerNav-container nav {
+  flex: 2;
+  /* Faz o nav ocupar mais espaço que o header */
+=======
   height: 15vh;
 }
 
@@ -24,10 +83,68 @@ body {
 
 .headerNav-container nav {
   flex: 2; /* Faz o nav ocupar mais espaço que o header */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
   display: flex;
   justify-content: space-around;
 }
 
+<<<<<<< HEAD
+/* Mexe na imagem dentro do container (apenas a do Header) */
+.headerNav-container img {
+  width: 20vw;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+/* Ao passar o mouse por cima da imagem, da um efeito de aumento */
+.headerNav-container img:hover {
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem */
+  transition: all 0.5s ease;
+  /* Tempo de transição */
+}
+
+/* Mexe no Nav, especificadamente nos A (links) */
+.headerNav-container nav a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+/* Mexe no Nav, especificadamente em um que está com a CLASS="destaque", para dar um efeito de que está naquela página */
+.headerNav-container nav a.destaque {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #b66e3f;
+  transition: color 0.5s ease;
+  background-color: #372522;
+  border-radius: 20px;
+  padding: 0.7em;
+  box-shadow: 6px 5px 0px gray;
+  transition: all 0.5s ease;
+}
+
+/* Ao passar o mouse por cima dos links, da um efeito de aumento */
+.headerNav-container nav a:hover {
+  color: #b66e3f;
+  transform: scale(1.1);
+  /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transition: color 0.5s ease;
+  /* Tempo de transição da cor */
+  transition: all 0.5s ease;
+  /* Faz com que a transição seja mais suave */
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CONCLUSÃO (article + elementos) ❕ --------------------------------------------------------------------------------------------- */
+=======
 .headerNav-container img {
   width: 20vw;
   height: auto;
@@ -51,25 +168,193 @@ body {
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* CONCLUSÃO (article + elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------ */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 .conclusao-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
+  animation: fadeIn 3s;
+=======
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 }
 
 .conclusao-container h1 {
   text-align: center;
+<<<<<<< HEAD
+  font-size: 3em;
+  background-color: #372522;
+  color: white;
+  width: 92vw;
+=======
   font-size: 2em;
   background-color: #372522;
   color: white;
   width: 97%;
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
   padding: 1em;
   border-radius: 20px;
 }
 
 .conclusao-container article {
   text-align: center;
+<<<<<<< HEAD
+  line-height: 4vh;
+  font-size: 1.3em;
+  width: 50vw;
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px gray;
+  transition: all 0.5s ease;
+}
+
+.conclusao-container article:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* IMAGEM DO GRUPO + LOGO DO GRUPO ❕ --------------------------------------------------------------------------------------------- */
+.imgGrupoLogo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 3s;
+}
+
+/* Mexe na Imagem, tamanho etc */
+.imgGrupoLogo-container img {
+  width: 30vw;
+  height: auto;
+  padding: 3em;
+  transition: all 0.5s ease;
+  border-radius: 150px;
+}
+
+/* Ao passar o mouse por cima da imagem, aumenta o tamanho */
+.imgGrupoLogo-container img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* NOME DOS INTEGRANTES ❕ ------------------------------------------------------------------------------------------------------- */
+.nomes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 20%;
+  font-size: 1.3em;
+  animation: fadeIn 3s;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
+.footer-container footer {
+  display: flex;
+  background-color: #b66e3f;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 20px;
+  animation: fadeIn 3s;
+}
+
+/* Mexe na Imagem */
+.footer-container img {
+  width: 10%;
+  height: auto;
+  animation: fadeIn 3s;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 720px) {
+  /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
+  .headerNav-container {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .headerNav-container img {
+    width: 30vw; 
+  }
+
+  .headerNav-container nav {
+    flex-direction: column; 
+    align-items: flex; 
+    text-align: center;
+    padding-bottom: 2em;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .headerNav-container nav a {
+    font-size: 1.1em; 
+    padding: 1em;
+  }
+
+  /* --------------------------------------------------------------------------------------------------------------------------- */
+
+  /* CONCLUSÃO (article + elementos) ❕ ----------------------------------------------------------------------------------------- */
+  .conclusao-container h1 {
+    font-size: 2.5em;
+    width: 89vw;
+  }
+
+  .conclusao-container article {
+    width: 80vw;
+    font-size: 1.1em;
+  }
+
+  .imgGrupoLogo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgGrupoLogo-container img {
+    width: 70vw;
+    padding: 2em;
+  }
+
+  .nomes {
+    font-size: 1.1em;
+    gap: 10%;
+  }
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+  /* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
+  .footer-container footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Mexe no H3 (título) */
+  .footer-container h3 {
+    padding: 1em;
+  }
+
+  /* Mexe na Imagem */
+  .footer-container img {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+=======
   width: 50%;
   padding: 1em;
   border-radius: 20px;
 }
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077

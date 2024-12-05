@@ -1,0 +1,419 @@
+/* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
+
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
+@font-face {
+    font-family: Parkinsans;
+    src: url(./Fonte/Parkinsans-Bold.ttf);
+    /* Link da pasta onde a fonte está */
+}
+
+/* Definir a fonte para todo o body(corpo) da página */
+body {
+    font-family: Parkinsans;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Começa com a opacidade 0, para ficar invisivel */
+    }
+
+    to {
+        opacity: 1;
+        /* Termina com a opacidade 1 */
+    }
+}
+
+/* " animation: fadeIn 3s; "  -> necessário colocar esse comando nos container para funcionar a animação */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
+.headerNav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    
+}
+
+/* Mexe no Header */
+.headerNav-container header {
+    flex: 0;
+    /* Faz o header ocupar o espaço disponível */
+}
+
+/* Mexe no Nav */
+.headerNav-container nav {
+    flex: 2;
+    /* Faz o nav ocupar mais espaço que o header */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Mexe na imagem dentro do container (apenas a do Header) */
+.headerNav-container img {
+    width: 20vw;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+/* Ao passar o mouse por cima da imagem, da um efeito de aumento */
+.headerNav-container img:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho da imagem */
+    transition: all 0.5s ease;
+    /* Tempo de transição */
+}
+
+/* Mexe no Nav, especificadamente nos A (links) */
+.headerNav-container nav a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    transition: color 0.5s ease;
+    background-color: #372522;
+    border-radius: 1.5vw;
+    padding: 0.7em;
+    box-shadow: 6px 5px 0px gray;
+    transition: all 0.5s ease;
+}
+
+/* Mexe no Nav, especificadamente em um que está com a CLASS="destaque", para dar um efeito de que está naquela página */
+.headerNav-container nav a.destaque {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #b66e3f;
+    transition: color 0.5s ease;
+    background-color: #372522;
+    border-radius: 20px;
+    padding: 0.7em;
+    box-shadow: 6px 5px 0px gray;
+    transition: all 0.5s ease;
+}
+
+/* Ao passar o mouse por cima dos links, da um efeito de aumento */
+.headerNav-container nav a:hover {
+    color: #b66e3f;
+    transform: scale(1.1);
+    /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+    transition: color 0.5s ease;
+    /* Tempo de transição da cor */
+    transition: all 0.5s ease;
+    /* Faz com que a transição seja mais suave */
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.slider {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeIn 3s;
+
+}
+
+.slides {
+    position: relative;
+    display: none;
+    width: 70vw;
+}
+
+.slides img {
+    margin-left: -21%;
+    height: 90vh;
+    width: 99.12vw;
+}
+
+.texto {
+    color: #f2f2f2;
+    font-size: 5vw;
+    position: absolute;
+    width: 40vw;
+    margin-left: -6%;
+    margin-top: -57%;
+}
+
+.cor {
+    color: red;
+}
+
+.botoes {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    padding: 1.8vw;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7vw;
+    transition: 0.5s;
+    background-color: transparent;
+    border-style: none;
+    animation: fadeIn 3s;
+}
+
+#anterior {
+    left: 0;
+    border-radius: 0.5vw;
+    animation: fadeIn 3s;
+}
+
+#proximo {
+    right: 0;
+    border-radius: 0.5vw;
+    animation: fadeIn 3s;
+}
+
+#anterior:hover,
+#proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 3s;
+}
+
+.botaoTrad {
+display: flex;
+flex-direction: row;
+background-color: rgb(224, 224, 224);
+border-radius: 5vw;
+width: 8vw;
+height: 3.5vw;
+align-items: center;
+justify-content: space-around;
+padding-top: 0.3vw;
+margin-left: 91%;
+margin-top: -2%;
+animation: fadeIn 3s;
+
+}
+
+.botaoBra {
+ border-radius: 5vw;
+ width: 3vw;
+ height: 3vw;
+ cursor: pointer;
+ animation: fadeIn 3s;
+}
+
+.botaoBra:hover {
+    border: 0.2vw solid rgb(189, 189, 189);
+   }
+
+
+.botaoUsa {
+    border-radius: 5vw;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    animation: fadeIn 3s;
+}
+
+.botaoUsa:hover {
+    border: 0.2vw solid rgb(189, 189, 189);
+   }
+
+
+
+.navImg {
+    width: 98.3vw;
+    position: absolute;
+    margin-top: -3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.4vw;
+    animation: fadeIn 3s;
+}
+
+.bolinhas {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    background-color: rgb(189, 189, 189);
+    border-radius: 50%;
+    transition: background-color 0.6s;
+    animation: fadeIn 3s;
+}
+
+.ativo,
+.bolinhas:hover {
+    background-color: #4e4e4e;
+    animation: fadeIn 3s;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 3s;
+}
+
+.titulo1 {
+    background-color: #BF0504;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    width: 15vw;
+    border-radius: 0.5vw;
+    padding: 0.3vw;
+    animation: fadeIn 3s;
+}
+
+.titulo2 {
+    background-color: #F56004;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    width: 15vw;
+    border-radius: 0.5vw;
+    padding: 0.3vw;
+    animation: fadeIn 3s;
+}
+
+.paragrafos {
+    width: 60vw;
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0px 0px 50px gray;
+    padding: 3vw;
+    border-radius: 2vw;
+    animation: fadeIn 3s;
+}
+
+.paragrafos:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    animation: fadeIn 3s;
+    cursor: pointer;
+    animation: fadeIn 3s;
+}
+
+/* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
+.footer-container footer {
+    display: flex;
+    background-color: #874922;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    border-radius: 20px;
+    animation: fadeIn 3s;
+}
+
+.footer-container img {
+    width: 10%;
+    height: auto;
+    animation: fadeIn 3s;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 720px) {
+
+    .headerNav-container {
+        flex-direction: column; 
+        height: auto; 
+      }
+    
+      .headerNav-container img {
+        width: 30vw; 
+      }
+    
+      .headerNav-container nav {
+        flex-direction: column; 
+        align-items: flex; 
+        text-align: center;
+        padding-bottom: 2em;
+        justify-content: space-around;
+        gap: 30px;
+      }
+    
+      .headerNav-container nav a {
+        font-size: 1.1em; 
+        padding: 1em;
+      }
+
+.slides img {
+    height: 57vh;
+    width: 100.4vw;
+    margin-left: -22%;
+}
+
+.botoes{
+    margin-top: 67%;
+}
+
+.texto {
+    width: 50vw;
+    margin-top: -56%;
+    
+}
+
+.titulo1 {
+    width: 21vw;
+    font-size: 1.5em;
+}
+
+.titulo2 {
+  width: 21vw;
+  font-size: 1.5em;
+}
+
+.paragrafos {
+  font-size: 0.9em;
+  width: 50vw;
+}
+
+.botaoTrad {
+    width: 13vw;
+    height: 5.5vw;
+    padding-top: 0.7vw;
+    margin-left: 84%;
+    
+    }
+    
+    .botaoBra {
+     width: 5vw;
+     height: 5vw;
+    }
+    
+    .botaoUsa {
+        width: 5vw;
+        height: 5vw;
+
+    }
+
+    .footer-container footer {
+        flex-direction: column; 
+        gap: 20px; 
+      }
+    
+      .footer-container h3 {
+        padding: 1em;
+      }
+    
+      .footer-container img {
+        width: 30vw; 
+        height: auto;
+      }
+
+}

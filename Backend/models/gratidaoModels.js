@@ -22,8 +22,8 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       request.on("row", (columns) => {
         result.push({
             id: columns[0].value,
-            mensagen: columns[1].value,
-            tema: columns[2].value
+            tema: columns[2].value,
+            mensagem: columns[1].value
         });
       });
 
@@ -57,13 +57,13 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       });
 
       // Evento 'row' para capturar todas as linhas de resultados
-      const result = []; // Variável para armazenar os resultados
+      let result = null;
       request.on("row", (columns) => {
-        result.push({
+        result = {
           id: columns[0].value,
-          mensagem: columns[1].value,
           tema: columns[2].value,
-        });
+          mensagem: columns[1].value,
+        };
       });
 
       // Ao completar a consulta, retorna o array com a mensagem aleátoria
@@ -136,7 +136,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       });
 
         // Ao completar a consulta, retorna as histórias encontradas
-        request.on("requestCompleted", () => {
+        request.on("requestCompleted", (rowCount) => {
             callback(null, result); // Retorna as histórias encontradas
         });
 
