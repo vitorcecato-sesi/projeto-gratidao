@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* Deixa a página sem margins e paddings, melhorando a visibilidade (mais bonito) */
 
 /* ------------------------------------------------------------------------------------------------------------------------------ */
@@ -10,7 +11,8 @@
 /* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ------------------------------------------------------------------------------------------- */
 @font-face {
   font-family: Parkinsans;
-  src: url(../Fonte/Parkinsans-Bold.ttf); /* Link da pasta onde a fonte está */
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+  /* Link da pasta onde a fonte está */
 }
 
 /* Definir a fonte para todo o body(corpo) da página */
@@ -23,10 +25,13 @@ body {
 /* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Começa com a opacidade 0, para ficar invisivel */
+    opacity: 0;
+    /* Começa com a opacidade 0, para ficar invisivel */
   }
+
   to {
-    opacity: 1; /* Termina com a opacidade 1 */
+    opacity: 1;
+    /* Termina com a opacidade 1 */
   }
 }
 
@@ -44,12 +49,14 @@ body {
 
 /* Mexe no Header */
 .headerNav-container header {
-  flex: 0; /* Faz o header ocupar o espaço disponível */
+  flex: 0;
+  /* Faz o header ocupar o espaço disponível */
 }
 
 /* Mexe no Nav */
 .headerNav-container nav {
-  flex: 2; /* Faz o nav ocupar mais espaço que o header */
+  flex: 2;
+  /* Faz o nav ocupar mais espaço que o header */
   display: flex;
   justify-content: space-around;
 }
@@ -63,8 +70,10 @@ body {
 
 /* Ao passar o mouse por cima da imagem, da um efeito de aumento */
 .headerNav-container img:hover {
-  transform: scale(1.1); /* Aumenta o tamanho da imagem */
-  transition: all 0.5s ease; /* Tempo de transição */
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem */
+  transition: all 0.5s ease;
+  /* Tempo de transição */
 }
 
 /* Mexe no Nav, especificadamente nos A (links) */
@@ -96,11 +105,12 @@ body {
 /* Ao passar o mouse por cima dos links, da um efeito de aumento */
 .headerNav-container nav a:hover {
   color: #b66e3f;
-  transform: scale(
-    1.1
-  ); /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
-  transition: color 0.5s ease; /* Tempo de transição da cor */
-  transition: all 0.5s ease; /* Faz com que a transição seja mais suave */
+  transform: scale(1.1);
+  /* Faz com que, ao passar o mouse por cima do nav, ele fique destacado */
+  transition: color 0.5s ease;
+  /* Tempo de transição da cor */
+  transition: all 0.5s ease;
+  /* Faz com que a transição seja mais suave */
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------- */
@@ -205,66 +215,74 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 720px) {
-/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
+
+  /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
   .headerNav-container {
-    flex-direction: column; 
-    height: auto; 
+    flex-direction: column;
+    height: auto;
   }
 
   .headerNav-container img {
-    width: 30vw; 
+    width: 30vw;
   }
 
   .headerNav-container nav {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 2em;
     justify-content: space-around;
     gap: 30px;
   }
 
   .headerNav-container nav a {
-    font-size: 1.1em; 
+    font-size: 1.1em;
     padding: 1em;
   }
-/* --------------------------------------------------------------------------------------------------------------------------- */
 
-/* CONCLUSÃO (article + elementos) ❕ ----------------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------------------------------------- */
+
+  /* CONCLUSÃO (article + elementos) ❕ ----------------------------------------------------------------------------------------- */
   .conclusao-container h1 {
-    font-size: 2.5em; 
-    width: 89vw; 
+    font-size: 2.5em;
+    width: 89vw;
   }
 
   .conclusao-container article {
     width: 80vw;
-    font-size: 1.1em; 
+    font-size: 1.1em;
   }
 
   .imgGrupoLogo-container {
     display: flex;
     flex-direction: column;
   }
+
   .imgGrupoLogo-container img {
     width: 70vw;
-    padding: 2em; 
+    padding: 2em;
   }
 
   .nomes {
     font-size: 1.1em;
-    gap: 10%; 
+    gap: 10%;
   }
 
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+  /* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
   .footer-container footer {
-    flex-direction: column; 
-    gap: 20px; 
+    flex-direction: column;
+    gap: 20px;
   }
 
+  /* Mexe no H3 (título) */
   .footer-container h3 {
     padding: 1em;
   }
 
+  /* Mexe na Imagem */
   .footer-container img {
-    width: 30vw; 
+    width: 30vw;
     height: auto;
   }
 }
