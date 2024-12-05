@@ -329,12 +329,28 @@ animation: fadeIn 3s;
 
 @media screen and (max-width: 720px) {
 
-    .headerNav-container nav a {
-        font-size: 0.55em;
-        border-radius: 1.2vw;
-        padding: 0.7em;
-        box-shadow: 4px 4px 0px gray;
-    }
+    .headerNav-container {
+        flex-direction: column; 
+        height: auto; 
+      }
+    
+      .headerNav-container img {
+        width: 30vw; 
+      }
+    
+      .headerNav-container nav {
+        flex-direction: column; 
+        align-items: flex; 
+        text-align: center;
+        padding-bottom: 2em;
+        justify-content: space-around;
+        gap: 30px;
+      }
+    
+      .headerNav-container nav a {
+        font-size: 1.1em; 
+        padding: 1em;
+      }
 
 .slides img {
     height: 57vh;
@@ -343,7 +359,7 @@ animation: fadeIn 3s;
 }
 
 .botoes{
-    margin-top: -9.5%;
+    margin-top: 67%;
 }
 
 .texto {
@@ -387,18 +403,17 @@ animation: fadeIn 3s;
     }
 
     .footer-container footer {
-        flex-direction: row;
-        gap: 8%;
-        padding-bottom: 1vw;
-        padding-top: 1vw;
-    }
-
-    .footer-container p {
-       font-size: 0.7em;
-    }
-
-    .footer-container h3 {
-       font-size: 0.8em;
-    }
+        flex-direction: column; 
+        gap: 20px; 
+      }
+    
+      .footer-container h3 {
+        padding: 1em;
+      }
+    
+      .footer-container img {
+        width: 30vw; 
+        height: auto;
+      }
 
 }
