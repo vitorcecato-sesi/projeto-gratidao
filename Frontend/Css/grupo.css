@@ -128,7 +128,7 @@ body {
   font-size: 3em;
   background-color: #372522;
   color: white;
-  width: 94vw;
+  width: 92vw;
   padding: 1em;
   border-radius: 20px;
 }
@@ -215,7 +215,6 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 720px) {
-
   /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
   .headerNav-container {
     flex-direction: column; 

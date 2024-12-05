@@ -347,7 +347,7 @@ some quando o resultado vir */
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  /* intrucao */
+  /* INTRODUÇÃO ❕ ------------------------------------------------------------------------------------------------------------------ */
   /* Mexe no H1 (título) */
   .instrucao-container h1 {
     color: #f56004;
@@ -357,15 +357,21 @@ some quando o resultado vir */
     text-shadow: 0px 0px 6px black;
   }
 
-  
-  /*  */
-
+  /* Mexe no P (parágrafo) */
   .instrucao-container p {
     padding: 1em;
   }
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
 
+  /* BOTÃO DE DAR MENSAGEM ❕ ------------------------------------------------------------------------------------------------------- */
+  button {
+    font-size: 1.5em;
+  }
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+  /* MENSAGEM QUE APARECE ❕ -------------------------------------------------------------------------------------------------------- */
   .mensagem-container {
     display: flex;
     align-items: center;
@@ -379,38 +385,20 @@ some quando o resultado vir */
     animation: fadeIn 3s;
   }
 
-  /*  */
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
-  button {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: white;
-    font-family: Parkinsans;
-    background-color: #f56004;
-    border-radius: 20px;
-    padding: 0.7em;
-    cursor: pointer;
-    box-shadow: 6px 5px 0px gray;
-    transition: all 0.5s ease;
+  /* CRIAR FRASE ❕ --------------------------------------------------------------------------------------------------------------- */
+  .criarMensagem-container h1 {
+    font-size: 2.5em;
+    text-align: center;
   }
 
-  /*  */
-  /* Mexe no H1 (título) */
-.criarMensagem-container h1 {
-  font-size: 2.5em;
-  text-align: center;
-}
+  /* Mexe no Input, onde o usuário vai escrever sua mensagem e tema */
+  .criarMensagem-container input {
+    font-size: 0.9em;
+  }
 
-/*  */
-.criarMensagem-container input {
-  font-size: 0.9em;
-}
-
-/*  */
-.criarMensagem-container button {
-  justify-content: center;
-  
-}
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
 
   /* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
   .footer-container footer {

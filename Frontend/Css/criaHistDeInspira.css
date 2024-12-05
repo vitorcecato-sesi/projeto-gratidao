@@ -220,28 +220,78 @@ button:hover {
 /* --------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 720px) {
-  /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
-    .headerNav-container {
-      flex-direction: column; /* Muda a direção do flex para coluna */
-      height: auto; /* Permite que a altura se ajuste automaticamente */
-    }
-  
-    .headerNav-container img {
-      width: 30vw; /* Aumenta a largura da imagem do header */
-    }
-  
-    .headerNav-container nav {
-      flex-direction: column; /* Muda a direção do nav para coluna */
-      align-items: center; /* Centraliza os itens */
-      padding-bottom: 2em;
-      justify-content: space-around;
-      gap: 30px;
-    }
-  
-    .headerNav-container nav a {
-      font-size: 1.1em; /* Diminui o tamanho da fonte dos links */
-      padding: 1em; /* Ajusta o padding */
-    }
+
+  /* HEADER + NAV (elementos) */
+  .headerNav-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Mexe na imagem dentro do container (apenas a do Header) */
+  .headerNav-container img {
+    width: 30vw;
+  }
+
+  /* Mexe no Nav */
+  .headerNav-container nav {
+    flex-direction: column;
+    align-items: flex;
+    text-align: center;
+    padding-bottom: 2em;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  /* Mexe no Nav, especificadamente nos A (links) */
+  .headerNav-container nav a {
+    font-size: 1.1em;
+    padding: 1em;
+  }
+
+  /* --------------------------------------------------------------------------------------------------------------------------- */
 
 
-  } 
+  /* TÍTULO DA PÁGINA  */
+  .tituloPagina {
+    font-size: 2.9em;
+    padding: 0.2em;
+  }
+
+  /* INPUT's (colocar os textos do usuário */
+  .criarMensagem-container {
+    padding: 2em;
+  }
+
+  /* Input, onde o usuário vai escrever sua mensagem e tema */
+  .criarMensagem-container input {
+    padding: 1em;
+    font-size: 1.4em;
+    width: 90%;
+  }
+
+  /* Botão de enviar a história  */
+  .botaoEnviar-container {
+    padding: 1.5em;
+  }
+
+  /*------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* FOOTER - INFORMAÇÕES E LOGO  */
+  .footer-container footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Mexe no H3 (título) */
+  .footer-container h3 {
+    padding: 1em;
+  }
+
+  /* Mexe na Imagem */
+  .footer-container img {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
