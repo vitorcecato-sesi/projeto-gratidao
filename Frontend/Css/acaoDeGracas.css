@@ -117,6 +117,7 @@ body {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Estiliza o article (titulo, paragrafo e posicionamento deles) */
 .titulo {
     display: flex;
     flex-direction: row;
@@ -176,6 +177,7 @@ body {
     animation: fadeIn 3s;
 }
 
+/* Estiliza os paragrafos quando o mouse está em cima */
 .paragrafo1:hover {
     transform: scale(1.1);
     transition: all 0.5s;
@@ -194,12 +196,16 @@ body {
     animation: fadeIn 3s;
 }
 
+/* Estiliza as imagens */
+
 .imagensArt {
     width: 35vw;
     height: 50vh;
     border-radius: 5vw;
     animation: fadeIn 3s;
 }
+
+/* Estiliza as imagens quando o mouse passa por cima */
 
 .imagensArt:hover {
     transform: scale(1.1);
