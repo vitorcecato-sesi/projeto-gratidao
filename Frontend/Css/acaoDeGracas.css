@@ -230,3 +230,63 @@ body {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 720px) {
+
+    .headerNav-container nav a {
+        font-size: 0.55em;
+        border-radius: 1.2vw;
+        padding: 0.7em;
+        box-shadow: 4px 4px 0px gray;
+    }
+
+    .headerNav-container nav a.destaque {
+        font-size: 0.55em;
+        border-radius: 1.2vw;
+        padding: 0.7em;
+        box-shadow: 4px 4px 0px gray;
+        
+    }
+
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .paragrafo1 {
+        width: 30vw;
+        font-size: 0.8em;
+    }
+    
+    .paragrafo2 {
+        width: 30vw;
+        font-size: 0.8em;
+     
+    }
+    
+    .paragrafo3 {
+        width: 30vw;
+        font-size: 0.8em;
+    
+    }
+    
+    .imagensArt {
+        width: 40vw;
+
+    }
+
+    .footer-container footer {
+        flex-direction: row;
+        gap: 8%;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+    }
+
+    .footer-container p {
+       font-size: 0.7em;
+    }
+
+    .footer-container h3 {
+       font-size: 0.8em;
+    }
+
+}
