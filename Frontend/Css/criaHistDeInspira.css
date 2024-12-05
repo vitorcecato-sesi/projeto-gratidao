@@ -218,3 +218,30 @@ button:hover {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 720px) {
+  /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
+    .headerNav-container {
+      flex-direction: column; /* Muda a direção do flex para coluna */
+      height: auto; /* Permite que a altura se ajuste automaticamente */
+    }
+  
+    .headerNav-container img {
+      width: 30vw; /* Aumenta a largura da imagem do header */
+    }
+  
+    .headerNav-container nav {
+      flex-direction: column; /* Muda a direção do nav para coluna */
+      align-items: center; /* Centraliza os itens */
+      padding-bottom: 2em;
+      justify-content: space-around;
+      gap: 30px;
+    }
+  
+    .headerNav-container nav a {
+      font-size: 1.1em; /* Diminui o tamanho da fonte dos links */
+      padding: 1em; /* Ajusta o padding */
+    }
+
+
+  } 
