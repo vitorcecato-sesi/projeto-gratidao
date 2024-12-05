@@ -172,19 +172,23 @@ body {
 }
 
 .botaoCria {
-    background-color: #f56004;
-    padding: 1.3vw;
-    color: white;
-    border-radius: 0.5vw;
     text-decoration: none;
-    animation: fadeIn 3s;
-}
+    font-size: 1.5em;
+    color: white;
+    font-family: Parkinsans;
+    background-color: #f56004;
+    border-radius: 20px;
+    padding: 0.7em;
+    cursor: pointer;
+    box-shadow: 6px 5px 0px gray;
+    transition: all 0.5s ease;
+  }
+
 
 .botaoCria:hover {
-    transition: 0.5s;
-    background-color: #f8a978;
-    animation: fadeIn 3s;
-}
+    color: #372522;
+    transform: scale(1.1);
+  }
 
 .flexColuna {
     padding: 10vw;
@@ -195,11 +199,11 @@ body {
 }
 
 #mensagemLoading {
-display: none;
+    display: none;
 }
 
 #historiaNaoEncontrada {
-display: none;
+    display: none;
 }
 
 .paginaHistoria {
