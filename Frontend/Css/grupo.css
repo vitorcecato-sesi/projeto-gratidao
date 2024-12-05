@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* FORMATAR A PÁGINA INTEIRA ❕ -------------------------------------------------------------------------------------------------- */
 * {
   margin: 0;
@@ -16,10 +17,19 @@
 }
 
 /* Definir a fonte para todo o body(corpo) da página */
+=======
+/* ADICIONAR UMA FONTE EXTERNAMENTE ❕ ----------------------------------------------------------------------------------------------------------------------------------- */
+@font-face {
+  font-family: Parkinsans;
+  src: url(../Fonte/Parkinsans-Bold.ttf);
+}
+
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 body {
   font-family: Parkinsans;
 }
 
+<<<<<<< HEAD
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* fadeIn (EFEITO DE APARECER COM O TEMPO AO ENTRAR NA PÁGINA) ❕ ----------------------------------------------------------------- */
@@ -40,10 +50,16 @@ body {
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HEADER + NAV (elementos) ❕ ---------------------------------------------------------------------------------------------------- */
+=======
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------------- */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 .headerNav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   height: 17vh;
 }
 
@@ -57,10 +73,22 @@ body {
 .headerNav-container nav {
   flex: 2;
   /* Faz o nav ocupar mais espaço que o header */
+=======
+  height: 15vh;
+}
+
+.headerNav-container header {
+  flex: 0; /* Faz o header ocupar o espaço disponível */
+}
+
+.headerNav-container nav {
+  flex: 2; /* Faz o nav ocupar mais espaço que o header */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
   display: flex;
   justify-content: space-around;
 }
 
+<<<<<<< HEAD
 /* Mexe na imagem dentro do container (apenas a do Header) */
 .headerNav-container img {
   width: 20vw;
@@ -116,25 +144,61 @@ body {
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 /* CONCLUSÃO (article + elementos) ❕ --------------------------------------------------------------------------------------------- */
+=======
+.headerNav-container img {
+  width: 20vw;
+  height: auto;
+}
+
+.headerNav-container nav a {
+  text-decoration: none;
+  color: #372522;
+  transition: color 0.5s ease;
+}
+
+.headerNav-container nav a:hover {
+  color: #bf0504;
+  transition: color 0.5s ease;
+}
+
+.headerNav-container nav a:active {
+  color: #874922;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* CONCLUSÃO (article + elementos) ❕ ------------------------------------------------------------------------------------------------------------------------------------ */
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 .conclusao-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   animation: fadeIn 3s;
+=======
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
 }
 
 .conclusao-container h1 {
   text-align: center;
+<<<<<<< HEAD
   font-size: 3em;
   background-color: #372522;
   color: white;
   width: 92vw;
+=======
+  font-size: 2em;
+  background-color: #372522;
+  color: white;
+  width: 97%;
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
   padding: 1em;
   border-radius: 20px;
 }
 
 .conclusao-container article {
   text-align: center;
+<<<<<<< HEAD
   line-height: 4vh;
   font-size: 1.3em;
   width: 50vw;
@@ -288,3 +352,9 @@ body {
 }
 
   /* ----------------------------------------------------------------------------------------------------------------------------- */
+=======
+  width: 50%;
+  padding: 1em;
+  border-radius: 20px;
+}
+>>>>>>> 8afc9588366ee49e19d6863aa1cec87fe1fd2077
