@@ -15,18 +15,19 @@ async function criarHistoriaGratidao() {
     const historia = inputHistoria.value.trim()
     const imagemURL = inputImagem.value.trim()
 
+    // Oculta a mensagem de sucesso
     msgSucesso.style.display = "none"
 
     // Confere se os campos foram preenchidos
     if (!titulo && !historia) {
         alert("Por favor, preencha todos os campos corretamente (título e história).")
-        return
+        return  // Encerra a função
     } else if (!titulo) {
         alert("Por favor, preencha o campo do título corretamente.")
-        return
+        return  // Encerra a função
     } else if (!historia) {
         alert("Por favor, preencha o campo da história corretamente.")
-        return
+        return  // Encerra a função
     }
 
     // Metodo POST para adicionar um novo usuário
@@ -37,13 +38,13 @@ async function criarHistoriaGratidao() {
     })
 
     if (response.ok) {
-        msgSucesso.style.display = "block"
         // Limpa os campos do formulário
         inputTitulo.value = ""
         inputHistoria.value = ""
         inputImagem.value = ""
-        msgSucesso.style.display = "block"
+        msgSucesso.style.display = "block" // Exibe a mensagem de sucesso
     } else {
+        // Em caso de erro, exibe o alerta com a mensagem de erro
         const error = await response.json();
         alert(`Erro ao adicionar história: ${error.message}`);
     }

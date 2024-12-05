@@ -1,6 +1,7 @@
 // Link da URL Mensagens
 const apiURLMsg = "http://localhost:3000/mensagens/"
 
+// Função para exibir mensagem aleátoria
 async function mensagemAleatoria() {
     // Section onde será inserido a mensagem aleátoria
     const msgContainer = document.getElementById("mensagem-container")
@@ -34,14 +35,16 @@ async function mensagemAleatoria() {
         msgContainer.appendChild(msgEscrita)
     
     } catch (error) {
-        console.error("Erro ao buscar dados da mensagem:", error)
-        document.getElementById("mensagemInicial").textContent = "Falha ao buscar mensagem."
+        // Condição para tratamento de erros
+        console.error("Erro ao buscar dados da mensagem:", error)   // Joga o erro no console para o desenvolvedor
+        document.getElementById("mensagemInicial").textContent = "Falha ao buscar mensagem."    // Demonstra ao usuário que ocorreu um erro.  
         document.getElementById("mensagemInicial").style.display = "block"
     }
-
+    // Oculta a mensagem de loading
     document.getElementById("loading").style.display = "none"
 }
 
+// Função para criar mensagem
 async function criarMensagemGratidao() {
 
     // Pega elementos
@@ -74,14 +77,15 @@ async function criarMensagemGratidao() {
         body: JSON.stringify({ tema, mensagem })
     })
 
+    // Verifica se o servidor respondeu
     if (response.ok) {
         msgSucesso.style.display = "block"
         // Limpa os campos do formulário
         inputTema.value = ""
         inputMensagem.value = ""
 
-      } else {
+    } else {
         const error = await response.json();
         alert(`Erro ao adicionar mensagem: ${error.message}`);
-      }
+    }
 }
