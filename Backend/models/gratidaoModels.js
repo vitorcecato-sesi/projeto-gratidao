@@ -136,7 +136,7 @@ const { Request, TYPES } = require("tedious"); // Importa as classes necessária
       });
 
         // Ao completar a consulta, retorna as histórias encontradas
-        request.on("requestCompleted", () => {
+        request.on("requestCompleted", (rowCount) => {
             callback(null, result); // Retorna as histórias encontradas
         });
 
