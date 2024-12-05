@@ -1,6 +1,10 @@
+// Atribuindo as variáveis:
+
 const imagens = document.querySelectorAll ("#slider section");
 let imagemAtual = 0;
 let bolinhas = document.getElementsByClassName("bolinhas");
+
+// Função para mostrar a imagem:
 
 function mostrarImagem(index) {
   imagens.forEach((section) => (section.style.display = "none"));
@@ -13,6 +17,7 @@ function mostrarImagem(index) {
         bolinhas[imagemAtual].className += " ativo";
 }
 
+// Funções de proxImagem e anteImagem:
 
 function proximaImagem() {
   imagemAtual = (imagemAtual + 1) % imagens.length;
@@ -24,12 +29,15 @@ function imagemAnterior() {
   mostrarImagem(imagemAtual);
 }   
 
+// Chama a função para mostrar a imagem:
 mostrarImagem(imagemAtual);
 
-
+// Atribui para as variáveis os botões do index por ID:
 const botaoProximo = document.getElementById("proximo");
 const botaoAnterior = document.getElementById("anterior");
 
+
+// Permite que o botao "escute" o click e chama a função:
 botaoProximo.addEventListener("click", () => {
   proximaImagem();
   
@@ -39,7 +47,11 @@ botaoAnterior.addEventListener("click", () => {
   imagemAnterior();
 });
 
+// Seta um intervalo para passar as imagens (3s):
+
 let intervalo = setInterval(proximaImagem, 3000)
+
+// Funções que traduzem para Inglês ou PT-BR (são chamadas pelo botão no index):
 
 function traduzirIngles(){
 

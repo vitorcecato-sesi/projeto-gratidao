@@ -45,7 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 17vh;
-    
+
 }
 
 /* Mexe no Header */
@@ -118,6 +118,7 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------- */
 
+/* Engloba todas as imagens com textos para o slider */
 .slider {
     margin: 0;
     display: flex;
@@ -130,34 +131,39 @@ body {
 
 }
 
+/* Engloba os textos e imagens e torna eles invisíveis (até a função do js pedir para aparecer) */
 .slides {
     position: relative;
     display: none;
     width: 70vw;
 }
 
+/* Estiliza as imagens */
 .slides img {
     margin-left: -21%;
     height: 90vh;
     width: 99.12vw;
 }
 
+/* Estiliza o texto que fica em cima das imagens */
 .texto {
     color: #f2f2f2;
     font-size: 5vw;
-    position: absolute;
+    position: absolute; /* Faz com que o texto ignore os outros elementos (fazendo ele sobrepor)*/
     width: 40vw;
     margin-left: -6%;
     margin-top: -57%;
 }
 
+/* Muda a cor das palavras */
 .cor {
     color: red;
 }
 
+/* Estiliza os botões (proximo e anterior) */
 .botoes {
     cursor: pointer;
-    position: absolute;
+    position: absolute; /* Faz com que o botao ignore os outros elementos (fazendo ele sobrepor)*/
     top: 55%;
     padding: 1.8vw;
     color: white;
@@ -169,53 +175,59 @@ body {
     animation: fadeIn 3s;
 }
 
+/* Posiciona o botao anterior */
 #anterior {
     left: 0;
     border-radius: 0.5vw;
     animation: fadeIn 3s;
 }
 
+/* Posiciona o botao proximo */
 #proximo {
     right: 0;
     border-radius: 0.5vw;
     animation: fadeIn 3s;
 }
 
+/* Muda os botões quando o mouse está em cima */
 #anterior:hover,
 #proximo:hover {
     background-color: rgba(0, 0, 0, 0.8);
     animation: fadeIn 3s;
 }
 
+/* Estiliza o esqueleto do botão de tradução */
 .botaoTrad {
-display: flex;
-flex-direction: row;
-background-color: rgb(224, 224, 224);
-border-radius: 5vw;
-width: 8vw;
-height: 3.5vw;
-align-items: center;
-justify-content: space-around;
-padding-top: 0.3vw;
-margin-left: 91%;
-margin-top: -2%;
-animation: fadeIn 3s;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(224, 224, 224);
+    border-radius: 5vw;
+    width: 8vw;
+    height: 3.5vw;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 0.3vw;
+    margin-left: 91%;
+    margin-top: -2%;
+    animation: fadeIn 3s;
 
 }
 
+/* Estiliza o botão (Brasil)  */
 .botaoBra {
- border-radius: 5vw;
- width: 3vw;
- height: 3vw;
- cursor: pointer;
- animation: fadeIn 3s;
+    border-radius: 5vw;
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    animation: fadeIn 3s;
 }
 
+/* Estiliza o botão (Brasil)(mouse em cima)  */
 .botaoBra:hover {
     border: 0.2vw solid rgb(189, 189, 189);
-   }
+}
 
-
+/* Estiliza o botão (Usa)  */
 .botaoUsa {
     border-radius: 5vw;
     width: 3vw;
@@ -224,15 +236,16 @@ animation: fadeIn 3s;
     animation: fadeIn 3s;
 }
 
+/* Estiliza o botão (Usa)(mouse em cima)  */
 .botaoUsa:hover {
     border: 0.2vw solid rgb(189, 189, 189);
-   }
+}
 
 
-
+/* Faz e posiciona o espaço em que as bolinhas vão ficar  */
 .navImg {
     width: 98.3vw;
-    position: absolute;
+    position: absolute; /* Faz com que o botao ignore os outros elementos (fazendo ele sobrepor)*/
     margin-top: -3%;
     display: flex;
     flex-direction: row;
@@ -241,6 +254,7 @@ animation: fadeIn 3s;
     animation: fadeIn 3s;
 }
 
+/* Estiliza as bolinhas */
 .bolinhas {
     cursor: pointer;
     height: 1vw;
@@ -251,11 +265,14 @@ animation: fadeIn 3s;
     animation: fadeIn 3s;
 }
 
+/* Estliza as bolinhas quando estão ativas ou com o mouse em cima */
 .ativo,
 .bolinhas:hover {
     background-color: #4e4e4e;
     animation: fadeIn 3s;
 }
+
+/* Article e informações (titulo, paragrafos e posição deles): ------------------------------------------------------------------------------------------------*/
 
 .article {
     display: flex;
@@ -296,6 +313,7 @@ animation: fadeIn 3s;
     animation: fadeIn 3s;
 }
 
+/* Estiliza os paragrafos quando um mouse passa por cima */
 .paragrafos:hover {
     transform: scale(1.1);
     transition: 0.5s;
@@ -303,6 +321,7 @@ animation: fadeIn 3s;
     cursor: pointer;
     animation: fadeIn 3s;
 }
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* FOOTER - INFORMAÇÕES E LOGO ------------------------------------------------------------------------------------------------------------------------------------------ */
 .footer-container footer {
@@ -327,75 +346,77 @@ animation: fadeIn 3s;
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Mudando o código para responsivar: */
+
 @media screen and (max-width: 720px) {
 
     .headerNav-container {
-        flex-direction: column; 
-        height: auto; 
-      }
-    
-      .headerNav-container img {
-        width: 30vw; 
-      }
-    
-      .headerNav-container nav {
-        flex-direction: column; 
-        align-items: flex; 
+        flex-direction: column;
+        height: auto;
+    }
+
+    .headerNav-container img {
+        width: 30vw;
+    }
+
+    .headerNav-container nav {
+        flex-direction: column;
+        align-items: flex;
         text-align: center;
         padding-bottom: 2em;
         justify-content: space-around;
         gap: 30px;
-      }
-    
-      .headerNav-container nav a {
-        font-size: 1.1em; 
+    }
+
+    .headerNav-container nav a {
+        font-size: 1.1em;
         padding: 1em;
-      }
-
-.slides img {
-    height: 57vh;
-    width: 100.4vw;
-    margin-left: -22%;
-}
-
-.botoes{
-    margin-top: 67%;
-}
-
-.texto {
-    width: 50vw;
-    margin-top: -56%;
-    
-}
-
-.titulo1 {
-    width: 21vw;
-    font-size: 1.5em;
-}
-
-.titulo2 {
-  width: 21vw;
-  font-size: 1.5em;
-}
-
-.paragrafos {
-  font-size: 0.9em;
-  width: 50vw;
-}
-
-.botaoTrad {
-    width: 13vw;
-    height: 5.5vw;
-    padding-top: 0.7vw;
-    margin-left: 84%;
-    
     }
-    
+
+    .slides img {
+        height: 57vh;
+        width: 100.4vw;
+        margin-left: -22%;
+    }
+
+    .botoes {
+        margin-top: 67%;
+    }
+
+    .texto {
+        width: 50vw;
+        margin-top: -56%;
+
+    }
+
+    .titulo1 {
+        width: 21vw;
+        font-size: 1.5em;
+    }
+
+    .titulo2 {
+        width: 21vw;
+        font-size: 1.5em;
+    }
+
+    .paragrafos {
+        font-size: 0.9em;
+        width: 50vw;
+    }
+
+    .botaoTrad {
+        width: 13vw;
+        height: 5.5vw;
+        padding-top: 0.7vw;
+        margin-left: 84%;
+
+    }
+
     .botaoBra {
-     width: 5vw;
-     height: 5vw;
+        width: 5vw;
+        height: 5vw;
     }
-    
+
     .botaoUsa {
         width: 5vw;
         height: 5vw;
@@ -403,17 +424,17 @@ animation: fadeIn 3s;
     }
 
     .footer-container footer {
-        flex-direction: column; 
-        gap: 20px; 
-      }
-    
-      .footer-container h3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-container h3 {
         padding: 1em;
-      }
-    
-      .footer-container img {
-        width: 30vw; 
+    }
+
+    .footer-container img {
+        width: 30vw;
         height: auto;
-      }
+    }
 
 }

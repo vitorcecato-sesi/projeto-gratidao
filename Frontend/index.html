@@ -28,14 +28,17 @@
       </section>
 
 
+      <!-- Slider de imagens automatizado -->
     <section id="slider" class="slider">
+        <!-- Primeira imagem -->
         <section class="slides">
             <img src="Imagens/homeImg1.png" alt="Imagem 1" />
             <h2 class="texto">
-                A <span class="cor">GRATIDÃO</span> É O CONCEITO
-                <span class="cor">MAIS IMPORTANTE</span> DA VIDA.
+                A <span class="cor">GRATIDÃO</span> <!-- O span está mudando a cor de apenas uma palavra --> É O CONCEITO
+                <span class="cor">MAIS IMPORTANTE</span> DA VIDA. <!-- Texto que fica em cima da imagem -->
             </h2>
         </section>
+        <!-- Segunda imagem (com a mesma lógica da anterior) -->
         <section class="slides">
             <img src="Imagens/homeImg2.png" alt="Imagem 2" />
             <h2 class="texto">
@@ -43,6 +46,7 @@
                 <span class="cor">MAIS IMPORTANTE</span> DA VIDA.
             </h2>
         </section>
+        <!-- Terceira imagem (com a mesma lógica da anterior) -->
         <section class="slides">
             <img src="Imagens/homeImg3.png" alt="Imagem 3" />
             <h2 class="texto">
@@ -50,6 +54,7 @@
                 <span class="cor">MAIS IMPORTANTE</span> DA VIDA.
             </h2>
         </section>
+          <!-- Quarta imagem (com a mesma lógica da anterior) -->
         <section class="slides">
             <img src="Imagens/homeImg4.png" alt="Imagem 4" />
             <h2 class="texto">
@@ -57,6 +62,7 @@
                 <span class="cor">MAIS IMPORTANTE</span> DA VIDA.
             </h2>
         </section>
+        <!-- Quinta imagem (com a mesma lógica da anterior) -->
         <section class="slides">
             <img src="Imagens/homeImg5.png" alt="Imagem 5" />
             <h2 class="texto">
@@ -66,10 +72,11 @@
         </section>
 
     </section>
-
+            <!-- Botões de anterior e próximo (passa as imagens no slider) -->
             <button id="anterior" class="botoes"> < </button>
             <button id="proximo" class="botoes"> > </button>
 
+            <!-- Navega entre as imagens e sinaliza a imagem atual -->
             <section class="navImg">
                 <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(0)"></a> 
                 <a id="bolinhas" class="bolinhas" onclick="mostrarImagem(1)"></a> 
@@ -83,11 +90,13 @@
 <br>
 <br>
 
+<!-- Botões de tradução, pegam uma função do javascript -->
 <section class="botaoTrad">
 <a onclick="traduzirBrasil()"><img class="botaoBra" src="./Imagens/bandeiraBrasa.png"></a>
 <a onclick="traduzirIngles()"><img class="botaoUsa" src="./Imagens/bandeiraUsa.png"></a>
 </section>
 
+<!-- Article e parágrafos -->
             <article class="article">
                 <h2 id="titulo1" class="titulo1"> CONCEITO </h2>
                 <br>
@@ -123,6 +132,7 @@
             <br>
             <br>
 
+            <!-- Footer e informações -->
         <section class="footer-container">
             <footer>
               <h3>

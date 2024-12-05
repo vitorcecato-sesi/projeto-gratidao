@@ -117,6 +117,7 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------- */
 
+/* Estiliza as instruções (no início da página): */
 .article {
     background-color: #B66E3F;
     padding: 3vw;
@@ -139,6 +140,9 @@ body {
     animation: fadeIn 3s;
 }
 
+/* ///////////////////// */
+
+/* Estiliza a barra de pesquisa:  */
 .pesquisar {
 
     justify-content: center;
@@ -153,7 +157,7 @@ body {
     font-family: Parkinsans;
 }
 
-
+/* Faz um espaço para o ícone ficar: */
 .contIco {
     display: flex;
     flex-direction: row-reverse;
@@ -164,6 +168,7 @@ body {
     animation: fadeIn 3s;
 }
 
+/* Estiliza o ícone: */
 .contIco i {
     color: #f56004;
     font-size: 1.5em;
@@ -171,6 +176,7 @@ body {
     cursor: pointer;
 }
 
+/* Estiliza o botão para criar histórias:  */
 .botaoCria {
     text-decoration: none;
     font-size: 1.5em;
@@ -184,12 +190,13 @@ body {
     transition: all 0.5s ease;
   }
 
-
+/* Estiliza quando o mouse passa por cima: */
 .botaoCria:hover {
     color: #372522;
     transform: scale(1.1);
   }
 
+  /* Posiciona os elementos em coluna */
 .flexColuna {
     padding: 10vw;
     display: flex;
@@ -198,13 +205,17 @@ body {
     animation: fadeIn 3s;
 }
 
+/* Deixa a mensagem invisível, até que a função a chame */
 #mensagemLoading {
     display: none;
 }
 
+/* Deixa a mensagem invisível, até que a função a chame */
 #historiaNaoEncontrada {
     display: none;
 }
+
+/* Estiliza os textos que irão aparecer depois da função do JS (paragrafos, titulos e imagens): */
 
 .paginaHistoria {
     display: flex;
@@ -249,6 +260,8 @@ body {
     display: flex;
     border-radius: 1vw;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 
