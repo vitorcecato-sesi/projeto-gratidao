@@ -134,6 +134,7 @@ body {
 .paragrafos {
     color: white;
     margin-left: 5%;
+    margin-top: 1%;
     font-size: 1.5em;
     animation: fadeIn 3s;
 }
@@ -149,7 +150,7 @@ body {
     outline: none;
     border-radius: 0.7vw;
     animation: fadeIn 3s;
-
+    font-family: Parkinsans;
 }
 
 
@@ -161,11 +162,10 @@ body {
     border-radius: 0.7vw;
     align-items: center;
     animation: fadeIn 3s;
-
 }
 
 .contIco i {
-    color: #919191;
+    color: #f56004;
     font-size: 1.5em;
     animation: fadeIn 3s;
     cursor: pointer;
@@ -226,7 +226,6 @@ display: none;
 .paragrafoHistoria {
     width: 70vw;
     text-align: center;
-    font-size: 0.8em;
     padding: 1vw;
     border-radius: 2vw;
     box-shadow: 0px 0px 50px gray;
@@ -298,8 +297,10 @@ display: none;
         padding: 1em;
       }
 
+      
+
       .article {
-        height: 80vh;
+        height: 90vh;
     }
 
     .titulo {
@@ -311,6 +312,53 @@ display: none;
     .paragrafos {
         font-size: 1.5em;
     }
+
+    .paginaHistoria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vw;
+    }
+    
+    .tituloHistoria {
+    
+        margin-top: 8%;
+        background-color: #372522;
+        color: white;
+        font-size: 1.5em;
+        width: 70vw;
+        padding: 1vw;
+        border-radius: 1.1vw;
+        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .paragrafoHistoria {
+        width: 70vw;
+        text-align: center;
+        font-size: 1em;
+        padding: 1vw;
+        border-radius: 2vw;
+        box-shadow: 0px 0px 50px gray;
+        border-radius: 1vw;
+        display: flex;
+    }
+    
+    .paragrafoHistoria:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .imagemHistoria {
+        width: 40vw;
+        margin-top: -2%;
+        height: 30vw;
+        display: flex;
+        border-radius: 1vw;
+    }
+    
 
 
 
