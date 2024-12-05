@@ -247,5 +247,44 @@ button:hover {
   /* --------------------------------------------------------------------------------------------------------------------------- */
 
 
+    .tituloPagina{
+      font-size: 2.9em;
+      padding: 0.2em;
+    }
 
-  } 
+    .criarMensagem-container{
+      padding: 2em ;
+    }
+
+    .criarMensagem-container input {
+      
+      padding: 1em;
+      font-size: 1.4em;
+      width: 90%;
+    }
+
+    .botaoEnviar-container{
+      padding: 1.5em;
+    }
+
+     /* FOOTER - INFORMAÇÕES E LOGO ❕ ----------------------------------------------------------------------------------------------- */
+  .footer-container footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Mexe no H3 (título) */
+  .footer-container h3 {
+    padding: 1em;
+  }
+
+  /* Mexe na Imagem */
+  .footer-container img {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+  
