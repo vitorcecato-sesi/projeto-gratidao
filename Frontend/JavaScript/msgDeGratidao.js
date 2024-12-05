@@ -70,7 +70,7 @@ async function criarMensagemGratidao() {
         return
     }
 
-    // Metodo POST para adicionar um novo usuário
+    // Metodo POST para adicionar uma nova mensagem
     const response = await fetch(apiURLMsg, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
