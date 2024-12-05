@@ -207,37 +207,37 @@ body {
 @media only screen and (max-width: 720px) {
 /* HEADER + NAV (elementos) ❕ ------------------------------------------------------------------------------------------------ */
   .headerNav-container {
-    flex-direction: column; /* Muda a direção do flex para coluna */
-    height: auto; /* Permite que a altura se ajuste automaticamente */
+    flex-direction: column; 
+    height: auto; 
   }
 
   .headerNav-container img {
-    width: 30vw; /* Aumenta a largura da imagem do header */
+    width: 30vw; 
   }
 
   .headerNav-container nav {
-    flex-direction: column; /* Muda a direção do nav para coluna */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column; 
+    align-items: center; 
     padding-bottom: 2em;
     justify-content: space-around;
     gap: 30px;
   }
 
   .headerNav-container nav a {
-    font-size: 1.1em; /* Diminui o tamanho da fonte dos links */
-    padding: 1em; /* Ajusta o padding */
+    font-size: 1.1em; 
+    padding: 1em;
   }
 /* --------------------------------------------------------------------------------------------------------------------------- */
 
 /* CONCLUSÃO (article + elementos) ❕ ----------------------------------------------------------------------------------------- */
   .conclusao-container h1 {
-    font-size: 2.5em; /* Diminui o tamanho do título */
-    width: 89vw; /* Ajusta a largura */
+    font-size: 2.5em; 
+    width: 89vw; 
   }
 
   .conclusao-container article {
-    width: 80vw; /* Aumenta a largura do artigo */
-    font-size: 1.1em; /* Diminui o tamanho da fonte do artigo */
+    width: 80vw;
+    font-size: 1.1em; 
   }
 
   .imgGrupoLogo-container {
@@ -245,22 +245,26 @@ body {
     flex-direction: column;
   }
   .imgGrupoLogo-container img {
-    width: 70vw; /* Aumenta a largura da imagem do grupo/logo */
-    padding: 2em; /* Ajusta o padding */
+    width: 70vw;
+    padding: 2em; 
   }
 
   .nomes {
-    font-size: 1.1em; /* Diminui o tamanho da fonte dos nomes */
-    gap: 10%; /* Ajusta o espaço entre os nomes */
+    font-size: 1.1em;
+    gap: 10%; 
   }
 
   .footer-container footer {
-    flex-direction: column; /* Muda a direção do footer para coluna */
-    gap: 20px; /* Ajusta o espaço entre os itens do footer */
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .footer-container h3 {
+    padding: 1em;
   }
 
   .footer-container img {
-    width: 30vw; /* Aumenta a largura da imagem do footer */
+    width: 30vw; 
     height: auto;
   }
 }
